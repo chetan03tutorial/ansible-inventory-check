@@ -16,7 +16,7 @@
         - app/source
         - app/meta-inf
 
-    -name : remove multiple directories created in the step above
+    - name : remove multiple directories created in the step above
       file:
         path: "$HOME/{{item}}"
         state: absent
