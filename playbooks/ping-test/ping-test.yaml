@@ -1,5 +1,6 @@
-name: Test connectivity with the target system ( ansible_target1)
-host: webserver
-tasks:
-  - name: Ping Test
-    ping:
+-
+  name: Test connectivity with the target system ( ansible_target1)
+  host: webserver
+  tasks:
+    - name: Ping Test
+      ping:
