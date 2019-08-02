@@ -6,3 +6,12 @@
       file:
         path: $HOME/app/conf
         state: directory
+
+    - name: create multiple directory in the $HOME
+      file:
+        path: "$HOME/{{item}}"
+        state: directory
+      loop:
+        - app/conf
+        - app/source
+        - app/meta-inf
