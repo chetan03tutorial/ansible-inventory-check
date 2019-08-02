@@ -1,0 +1,7 @@
+-
+  name: Create a directory app-conf in the $HOME/app/conf directory
+  hosts: webserver
+  tasks:
+    - name: Ensure a configuration directory exists in $HOME/app
+      file: $HOME/app/conf
+      state: directory
