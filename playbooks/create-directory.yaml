@@ -27,5 +27,10 @@
 
     - name: Read the xml file
       xml:
-        path: /playbooks/purchaseOrder.xml
-        
+        path: /purchaseOrder.xml
+        xpath: /PurchaseOrders/PurchaseOrder/Items/Item
+        count: yes
+        register: xmlresp
+
+    - name: print the xml resp
+      debug: var=xmlresp
