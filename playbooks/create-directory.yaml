@@ -29,7 +29,7 @@
       xml:
         path: /playbooks/purchaseOrder.xml
         xpath: /PurchaseOrders/PurchaseOrder/Items/Item/@PartNumber
-        content: attribute
+        content: text
         attribute: PartNumber
         register: xmlresp
 
