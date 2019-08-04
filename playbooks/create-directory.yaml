@@ -28,9 +28,8 @@
     - name: Read the xml file
       xml:
         path: /playbooks/purchaseOrder.xml
-        xpath: /PurchaseOrders/PurchaseOrder/Items/Item/@PartNumber
-        content: text
-        attribute: PartNumber
+        xpath: /PurchaseOrders/PurchaseOrder/Items/Item
+        count: yes
         register: xmlresp
 
     - name: print the xml resp
