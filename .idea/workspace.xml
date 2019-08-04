@@ -25,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playbooks/create-directory.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="458">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -86,17 +86,6 @@
               <item name="ansible-inventory-check" type="b2602c69:ProjectViewProjectNode" />
               <item name="ansible-inventory-check" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ansible-inventory-check" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ansible-inventory-check" type="462c0819:PsiDirectoryNode" />
-              <item name="playbooks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ansible-inventory-check" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ansible-inventory-check" type="462c0819:PsiDirectoryNode" />
-              <item name="playbooks" type="462c0819:PsiDirectoryNode" />
-              <item name="ping-test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -106,7 +95,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564947184863" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564947247775" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
   </component>
   <component name="RunDashboard">
@@ -195,8 +184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playbooks/create-directory.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="458">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
         </state>
       </provider>
     </entry>
