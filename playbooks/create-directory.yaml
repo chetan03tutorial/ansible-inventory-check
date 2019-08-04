@@ -23,3 +23,15 @@
       loop:
         - app/source
         - app/meta-inf
+
+
+    - name: Read the xml file
+      xml:
+        path: /playbooks/purchaseOrder.xml
+        xpath: /PurchaseOrders/PurchaseOrder/Items/Item/@PartNumber
+        content: attribute
+        attribute: PartNumber
+        register: xmlresp
+
+    - name: print the xml resp
+      debug: var=xmlresp
