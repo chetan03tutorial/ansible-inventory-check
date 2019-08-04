@@ -27,7 +27,7 @@
 
     - name: Read the xml file
       xml:
-        path: /purchaseOrder.xml
+        path: purchaseOrder.xml
         xpath: /PurchaseOrders/PurchaseOrder/Items/Item
         count: yes
         register: xmlresp
