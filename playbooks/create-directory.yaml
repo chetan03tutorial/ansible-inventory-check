@@ -28,4 +28,3 @@
     - name: Read the xml file
       xml:
         path: /ansible-inventory-check/playbooks/purchaseOrder.xml
-       
