@@ -24,12 +24,27 @@
         - app/source
         - app/meta-inf
 
+    - name: Copy File
+      copy:
+        src: /ansible-inventory-check/playbooks/purchaseOrder.xml
+        dest: $HOME/app/conf/purchaseOrder.xml
 
     - name: Read the xml file
       xml:
-        path: /ansible-inventory-check/playbooks/purchaseOrder.xml
-        xpath: /PurchaseOrders/PurchaseOrder
+        path: $HOME/app/conf/purchaseOrder.xml
+        xpath: /PurchaseOrders/PurchaseOrder/Items/Item
         content: text
+      register: hits
+    - debug:
+        var: hits
 
+    - name: Read the xml file for the Items
+      xml:
+        path: $HOME/app/conf/purchaseOrder.xml
+        xpath: /PurchaseOrders/PurchaseOrder/Items/Item/@PartNumber
+        content: attribute
+      register: xmlresp
 
-    -name:
+    - name: Show the attribute values
+      debug:
+        var: xmlresp
