@@ -7,7 +7,7 @@
     - debug:
         var: results
     - set_fact:
-        myvalue: "{{ 'foobar food foosball football' | regex_search('(foo)') }}"
+        myvalue: "{{ results.stdout | regex_findall(regexp)}}"
       vars:
         regexp: 'value=\"([^"]+)'
     - debug:
