@@ -7,7 +7,7 @@
     - debug:
         var: results
     - set_fact:
-        myvalue: "{{ results.stdout | regex_search('(regexp)')}}"
+        myvalue: "{{ results.stdout | regex_search(regexp,'\\1')}}"
       vars:
         regexp: 'value=\"([^"]+)'
     - debug:
