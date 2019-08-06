@@ -35,7 +35,7 @@
     - name: Replace the token in the configuration files
       replace:
         path: "{{item.path}}"
-        regex: "{{item.regex}}"
+        regexp: "{{item.regex}}"
         replace: "{{item.replace}}"
       with_items:
         - {path: 'root/app/conf/app-conf1.xml', regex: '10999', replace: 'GaneshJi'}
