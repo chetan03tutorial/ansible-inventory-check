@@ -2,7 +2,7 @@
   name: Create a directory app-conf in the $HOME/app/conf directory
   hosts: webserver
   tasks:
-    - shell: echo 'vault-option name="KEYSTORE_PASSWORD" value="MASK-5dOaAVafCSd" value="One more time" value="MASK-ED-123-LT"'
+    - shell: echo 'vault-option name="KEYSTORE_PASSWORD" value="MASK-ED-123-LT"'
       register: results
     - set_fact:
         myvalue: "{{ results.stdout | regex_search(regexp) }}"
