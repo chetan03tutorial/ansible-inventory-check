@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21375b4f-b3a9-467e-9d26-f4426dc4e172" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/conf/app-conf1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/app-conf2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playbooks/replace-token.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/playbooks/replace-token.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
-              <caret line="41" column="104" selection-start-line="41" selection-start-column="104" selection-end-line="41" selection-end-column="104" />
+              <caret line="41" column="104" lean-forward="true" selection-start-line="41" selection-start-column="104" selection-end-line="41" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -147,7 +144,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565083034503" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565083810645" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
   </component>
   <component name="RecentsManager">
@@ -221,13 +218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inventory.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/app-conf1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -260,6 +250,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inventory.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="35" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/playbooks/create-directory-2.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -270,7 +267,7 @@
     <entry file="file://$PROJECT_DIR$/playbooks/replace-token.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
-          <caret line="41" column="104" selection-start-line="41" selection-start-column="104" selection-end-line="41" selection-end-column="104" />
+          <caret line="41" column="104" lean-forward="true" selection-start-line="41" selection-start-column="104" selection-end-line="41" selection-end-column="104" />
         </state>
       </provider>
     </entry>

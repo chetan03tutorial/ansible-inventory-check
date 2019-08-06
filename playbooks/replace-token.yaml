@@ -39,4 +39,4 @@
         replace: "{{item.replace}}"
       with_items:
         - {path:'$HOME/app/conf/app-conf1.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJi'}
-        - {path:'$HOME/app/conf/app-conf2.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJiBhagwan'}
+        - {path:$HOME'/app/conf/app-conf2.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJiBhagwan'}
