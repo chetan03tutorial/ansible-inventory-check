@@ -1,0 +1,42 @@
+-
+  name: Create a directory app-conf in the $HOME/app/conf directory
+  hosts: webserver
+  tasks:
+    - name: Ensure a configuration directory exists in $HOME/app
+      file:
+        path: $HOME/app/conf
+        state: directory
+
+    - name: create multiple directory in the $HOME
+      file:
+        path: "$HOME/{{item}}"
+        state: directory
+      loop:
+        - app/conf
+        - app/source
+        - app/meta-inf
+
+    - name : remove multiple directories created in the step above
+      file:
+        path: "$HOME/{{item}}"
+        state: absent
+      loop:
+        - app/source
+        - app/meta-inf
+
+    - name: Copy File
+      copy:
+        src: "/ansible-inventory-check/conf/{{item}}.xml"
+        dest: "$HOME/app/conf/{{item}}.xml"
+      loop:
+        - app-conf1
+        - app-conf2
+
+    - name: Replace the token in the configuration files
+      replace:
+        path: "{{item.path}}"
+        regex: "{{item.regex}}"
+        replace: "{{item.replace}}"
+      with_items:
+        - {path:'$HOME/app/conf/app-conf1.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJi'}
+        - {path:'$HOME/app/conf/app-conf2.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJiBhagwan'}
