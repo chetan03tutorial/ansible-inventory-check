@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21375b4f-b3a9-467e-9d26-f4426dc4e172" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/replace-token.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/replace-token.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playbooks/replace-token.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="41" column="104" lean-forward="true" selection-start-line="41" selection-start-column="104" selection-end-line="41" selection-end-column="104" />
+            <state relative-caret-position="458">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -144,7 +145,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565083810645" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565083939365" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
   </component>
   <component name="RecentsManager">
@@ -266,8 +267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playbooks/replace-token.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="41" column="104" lean-forward="true" selection-start-line="41" selection-start-column="104" selection-end-line="41" selection-end-column="104" />
+        <state relative-caret-position="458">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
         </state>
       </provider>
     </entry>
