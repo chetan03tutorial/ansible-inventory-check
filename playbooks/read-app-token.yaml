@@ -3,14 +3,14 @@
   hosts: webserver
   tasks:
     - name: Copy File to the target system
-        copy:
-          src: /ansible-inventory-check/playbooks/purchaseOrder.xml
-          dest: $HOME/app/conf/purchaseOrder.xml
+      copy:
+        src: /ansible-inventory-check/playbooks/purchaseOrder.xml
+        dest: $HOME/app/conf/purchaseOrder.xml
 
     - name: importing the file contents to variable
-        slurp:
-          src: $HOME/app/conf/purchaseOrder.xml
-        register: idb_endpoint_b64
+      slurp:
+        src: $HOME/app/conf/purchaseOrder.xml
+      register: idb_endpoint_b64
 
     - name: Decoding the content from base 64 to normal text
       set_fact:
