@@ -2,14 +2,14 @@
   name: Read a token using regular expression
   hosts: webserver
   tasks:
-    - shell: echo 'vault-option name="@KEYSTORE_PASSWORD@" value="@MASK-5dOaAVafCSd@" value="@One more time@" value="@MASK-ED-123-LT@"'
+    - shell: echo 'vault-option name="KEYSTORE_PASSWORD" value="MASK-5dOaAVafCSd" value="One more time" value="MASK-ED-123-LT"'
       register: results
     - debug:
         var: results
     - set_fact:
         myvalue: "{{ results.stdout | regex_findall(regexp)}}"
       vars:
-        regexp: '(?<=\@)(.*?)(?=\@)'
+        regexp: 'value=\"([^"]+)'
     - debug:
         var: myvalue
 
