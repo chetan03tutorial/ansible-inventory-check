@@ -3,7 +3,7 @@
   hosts: webserver
   tasks:
     - name: Copy File
-        copy:
+      copy:
         src: /ansible-inventory-check/playbooks/purchaseOrder.xml
         dest: $HOME/app/conf/purchaseOrder.xml
 
