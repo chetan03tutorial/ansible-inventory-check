@@ -1,8 +1,8 @@
 -
-  name: Read a file from the system
+  name: Read a file on the target system
   hosts: webserver
   tasks:
-    - name: Copy File
+    - name: Copy File to the target system
       copy:
         src: /ansible-inventory-check/playbooks/purchaseOrder.xml
         dest: $HOME/app/conf/purchaseOrder.xml
@@ -12,9 +12,8 @@
         src: $HOME/app/conf/purchaseOrder.xml
       register: idb_endpoint_b64
 
-    - set_fact:
-        idb_endpoint: "{{ idb_endpoint_b64.content}}"
+    
 
     - debug:
-        var: idb_endpoint
+        var: "{{ idb_endpoint_b64.content | b64decode }}"
 
