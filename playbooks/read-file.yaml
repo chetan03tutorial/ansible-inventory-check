@@ -12,8 +12,9 @@
         src: $HOME/app/conf/purchaseOrder.xml
       register: idb_endpoint_b64
 
-
+    - set_fact:
+        idb_endpoint: "{{ idb_endpoint_b64.content | b64decode }}"
 
     - debug:
-        var: idb_endpoint_b64.content
+        var: idb_endpoint
 
