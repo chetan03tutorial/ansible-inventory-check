@@ -10,6 +10,5 @@
     - name: display multiple file contents
       debug: var=item
       with_file:
-        - "/root/app/conf/purchaseOrder.xml"
+        - /root/app/conf/purchaseOrder.xml
 
-    
