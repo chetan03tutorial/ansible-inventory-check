@@ -13,7 +13,7 @@
       register: idb_endpoint_b64
 
     - set_fact:
-        idb_endpoint: "{{ idb_endpoint_b64.content | b64decode }}"
+        idb_endpoint: "{{ idb_endpoint_b64.content}}"
 
     - debug:
         var: idb_endpoint
