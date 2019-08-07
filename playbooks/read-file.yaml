@@ -13,4 +13,4 @@
         - "/root/ansible-inventory-check/playbooks/purchaseOrder.xml"
 
     - name: Look up for a file and read it
-        var: fileContent={{lookup('file', '/root/ansible-inventory-check/playbooks/purchaseOrder.xml') }}
+        var: fileContent="{{lookup('file', '/root/ansible-inventory-check/playbooks/purchaseOrder.xml') }}"
