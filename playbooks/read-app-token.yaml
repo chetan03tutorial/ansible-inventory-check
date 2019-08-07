@@ -26,7 +26,7 @@
         var: results
 
     - set_fact:
-        myvalue: "{{ idb_endpoint.stdout | regex_findall(regexp)}}"
+        myvalue: "{{ idb_endpoint | regex_findall(regexp)}}"
       vars:
         regexp: '(?<=\@)(.*?)(?=\@)'
 
