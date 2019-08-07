@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <PurchaseOrders>
-    <PurchaseOrder PurchaseOrderNumber="99503" OrderDate="1999-10-20">
+    <PurchaseOrder PurchaseOrderNumber="@99503@" OrderDate="1999-10-20">
         <Address Type="Shipping">
             <Name>Ellen Adams</Name>
             <Street>123 Maple Street</Street>
@@ -33,7 +33,7 @@
             </Item>
         </Items>
     </PurchaseOrder>
-    <PurchaseOrder PurchaseOrderNumber="99505" OrderDate="1999-10-22">
+    <PurchaseOrder PurchaseOrderNumber="@99505@" OrderDate="1999-10-22">
         <Address Type="Shipping">
             <Name>Cristian Osorio</Name>
             <Street>456 Main Street</Street>
