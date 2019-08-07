@@ -1,0 +1,14 @@
+-
+  name: Read a file on the target system
+  hosts: webserver
+  tasks:
+    - name: Copy File to the target system
+      copy:
+        src: "/ansible-inventory-check/conf/{{item}}"
+        dest: "$HOME/app/conf/{{item}}"
+      loop:
+        - token.properties
+
+    - debug:
+        msg="user.name is {{ lookup('ini', 'user.name type=properties file=/ansible-inventory-check/conf/token.properties') }}"
+

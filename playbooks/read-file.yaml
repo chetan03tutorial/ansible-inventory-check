@@ -23,6 +23,3 @@
     - debug:
         var: idb_endpoint
 
-    - debug:
-        msg="user.name is {{ lookup('ini', 'user.name type=properties file=/ansible-inventory-check/conf/token.properties') }}"
-

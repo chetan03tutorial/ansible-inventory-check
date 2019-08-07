@@ -33,4 +33,11 @@
     - debug:
         var: myvalue
 
+    - name: Replace the token in the configuration files
+      replace:
+        path: $HOME/app/conf/purchaseOrder.xml
+        regexp: '(?<=\@)(.*?)(?=\@)'
+        replace: "{{item}}"
+      loop: "{{myvalue}}"
+
 
