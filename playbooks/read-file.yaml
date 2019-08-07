@@ -10,4 +10,6 @@
     - name: display multiple file contents
       debug: var=item
       with_file:
-        - "/root/ansible-inventory-check/playbooks/purchaseOrder.xml"
+        - "/root/app/conf/purchaseOrder.xml"
+
+    
