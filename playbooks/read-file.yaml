@@ -8,7 +8,8 @@
         dest: $HOME/app/conf/purchaseOrder.xml
 
     - name: display multiple file contents
-      debug: var=item
+      debug:
+        var=item
       with_file:
-        - /ansible-inventory-check/playbooks/purchaseOrder.xml
+        - "/ansible-inventory-check/playbooks/purchaseOrder.xml"
 
