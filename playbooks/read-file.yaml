@@ -12,7 +12,8 @@
         src: $HOME/app/conf/purchaseOrder.xml
       register: idb_endpoint_b64
 
-    - set_fact:
+    - name: Decoding the content from base 64 to normal text
+      set_fact:
         idb_endpoint: "{{ idb_endpoint_b64.content | b64decode }}"
 
     - debug:
