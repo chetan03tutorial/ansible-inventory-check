@@ -55,7 +55,6 @@
       replace:
         path: /home/LDC/app/conf/purchaseOrder.xml
         regexp: '(?<=\@)(.*?)(?=\@)'
-        msg=
         replace: "{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       loop: "{{myvalue}}"
 
