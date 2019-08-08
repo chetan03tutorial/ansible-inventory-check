@@ -44,7 +44,7 @@
         var: myvalue
 
     - debug:
-        msg="{{ lookup('ini', 'user.name type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
+        msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       loop: "{{myvalue}}"
       register: myresult
 
