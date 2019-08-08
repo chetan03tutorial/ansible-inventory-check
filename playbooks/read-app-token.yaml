@@ -57,6 +57,11 @@
     - debug:
         var: resultingToken
 
+    - var:
+        content: "{{lookup('file','/home/LDC/ansible-inventory-check/conf/token.properties'}}"
+
+    - debug:
+        message="content is {{content}}"
 
     - template:
         src: /home/LDC/ansible-inventory-check/conf/PO.j2
@@ -69,10 +74,10 @@
     - name: Replace the token in the configuration files
       replace:
         path: /home/LDC/app/conf/purchaseOrder.xml
-        regexp: '@{{item.item}}@'
+        regexp: '{{item.item}}'
         #replace: 'GaneshJi'
-        replace: "{{'{{item.item}}'}}"
-        #replace: "{{{{ lookup('ini', '{{item.item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}}}"
+        #replace: "{{'{{item.item}}'}}"
+        replace: "{{{{ lookup('ini', '{{item.item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}}}"
       with_items: "{{resultingToken}}"
 
 
