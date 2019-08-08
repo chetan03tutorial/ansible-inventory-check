@@ -57,6 +57,6 @@
         regexp: '(?<=\@)(.*?)(?=\@)'
         replace: 'alpha'
         #replace: "{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
-      loop: "{{myvalue}}"
+      with_items: "{{myvalue}}"
 
 
