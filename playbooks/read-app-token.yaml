@@ -43,6 +43,10 @@
     - debug:
         var: myvalue
 
+    - debug:
+        var: "{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
+      loop: "{{myvalue}}"
+
     - name: Replace the token in the configuration files
       replace:
         path: /home/LDC/app/conf/purchaseOrder.xml
