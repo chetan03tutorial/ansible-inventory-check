@@ -2,21 +2,27 @@
   name: Read a token using regular expression
   hosts: webserver
   tasks:
-    - name: Copy File to the target system
+    - name: Copy configuration xml files to the target system
       copy:
-        src: /ansible-inventory-check/playbooks/purchaseOrder.xml
-        dest: $HOME/app/conf/purchaseOrder.xml
+        src: /home/LDC/ansible-inventory-check/conf/{{item.file}}.{{item.ext}}
+        dest: /home/LDC/app/conf/{{item}}.{{ext}}
+      loop:
+        - {file: app-conf1, ext: xml}
+        - {file: app-conf2, ext: xml}
+        - {file: purchaseOrder, ext: xml}
+        - {file: token, ext: properties}
 
     - name: importing the file contents to variable
       slurp:
-        src: $HOME/app/conf/purchaseOrder.xml
+        src: /home/LDC/app/conf/purchaseOrder.xml
       register: idb_endpoint_b64
 
     - name: Decoding the content from base 64 to normal text
       set_fact:
         idb_endpoint: "{{ idb_endpoint_b64.content | b64decode }}"
 
-    - debug:
+    - name: Print the content on the screen
+      debug:
         var: idb_endpoint
 
     - shell: echo 'vault-option name="@KEYSTORE_PASSWORD@" value="@MASK-5dOaAVafCSd@" value="@One more time@" value="@MASK-ED-123-LT@"'
@@ -35,9 +41,9 @@
 
     - name: Replace the token in the configuration files
       replace:
-        path: $HOME/app/conf/purchaseOrder.xml
+        path: /home/LDC/app/conf/purchaseOrder.xml
         regexp: '(?<=\@)(.*?)(?=\@)'
-        replace: "{{item}}"
+        replace: "{{ lookup('ini', '{{item}} type=properties file=/ansible-inventory-check/conf/token.properties') }}"
       loop: "{{myvalue}}"
 
 

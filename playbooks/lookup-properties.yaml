@@ -8,7 +8,7 @@
         dest: "$HOME/app/conf/{{item}}"
       loop:
         - token.properties
-
+      
     - debug:
         msg="user.name is {{ lookup('ini', 'user.name type=properties file=/ansible-inventory-check/conf/token.properties') }}"
 
