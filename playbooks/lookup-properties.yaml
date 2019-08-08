@@ -4,11 +4,11 @@
   tasks:
     - name: Copy File to the target system
       copy:
-        src: "/ansible-inventory-check/conf/{{item}}"
-        dest: "$HOME/app/conf/{{item}}"
+        src: "/home/LDC/ansible-inventory-check/conf/{{item}}"
+        dest: "home/LDC/app/conf/{{item}}"
       loop:
         - token.properties
-      
+
     - debug:
-        msg="user.name is {{ lookup('ini', 'user.name type=properties file=/ansible-inventory-check/conf/token.properties') }}"
+        msg="user.name is {{ lookup('ini', 'user.name type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
 
