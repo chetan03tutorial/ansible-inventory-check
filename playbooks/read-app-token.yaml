@@ -62,6 +62,8 @@
         src: /home/LDC/ansible-inventory-check/conf/PO.j2
         dest: /home/LDC/app/conf/PO.xml
       loop: "{{myresult.results}}"
+      loop_control:
+        loop_var: token
 
 
     - name: Replace the token in the configuration files
