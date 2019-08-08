@@ -5,7 +5,7 @@
     - name: Copy configuration xml files to the target system
       copy:
         src: /home/LDC/ansible-inventory-check/conf/{{item.file}}.{{item.ext}}
-        dest: /home/LDC/app/conf/{{item}}.{{ext}}
+        dest: /home/LDC/app/conf/{{item.file}}.{{item.ext}}
       loop:
         - {file: app-conf1, ext: xml}
         - {file: app-conf2, ext: xml}
