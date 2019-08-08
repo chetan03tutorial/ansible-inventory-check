@@ -2,6 +2,10 @@
   name: Read a token using regular expression
   hosts: webserver
   tasks:
+    - name: Ensure a configuration directory exists in $HOME/app
+      file:
+        path: /home/LDC/app/conf
+        state: directory
     - name: Copy configuration xml files to the target system
       copy:
         src: /home/LDC/ansible-inventory-check/conf/{{item.file}}.{{item.ext}}
