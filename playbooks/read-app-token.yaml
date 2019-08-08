@@ -1,7 +1,7 @@
 -
   name: Read a token using regular expression
   hosts: webserver
-  var:
+  vars:
     content: "{{lookup('file','/home/LDC/ansible-inventory-check/conf/token.properties'}}"
   tasks:
     - name: Ensure a configuration directory exists in $HOME/app
