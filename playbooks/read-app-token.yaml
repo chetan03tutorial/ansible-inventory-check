@@ -57,6 +57,11 @@
     - debug:
         var: resultingToken
 
+
+    - template:
+        src: /home/LDC/ansible-inventory-check/conf/PO.j2
+        dest: /home/LDC/app/conf/PO.xml
+
     - name: Replace the token in the configuration files
       replace:
         path: /home/LDC/app/conf/purchaseOrder.xml
