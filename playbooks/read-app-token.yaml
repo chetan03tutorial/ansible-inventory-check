@@ -69,7 +69,7 @@
     - name: Replace the token in the configuration files
       replace:
         path: /home/LDC/app/conf/purchaseOrder.xml
-        regexp: '{{item.item}}'
+        regexp: '@{{item.item}}@'
         #replace: 'GaneshJi'
         replace: "{{ lookup('ini', '{{item.item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       with_items: "{{resultingToken}}"
