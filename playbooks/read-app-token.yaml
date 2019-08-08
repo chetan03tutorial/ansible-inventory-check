@@ -62,7 +62,7 @@
 
 
     - debug:
-        message="content is {{content}}"
+        msg="content is {{content}}"
 
     - template:
         src: /home/LDC/ansible-inventory-check/conf/PO.j2
