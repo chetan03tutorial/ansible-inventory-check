@@ -26,11 +26,12 @@
 
     - name: Copy File
       copy:
-        src: "/ansible-inventory-check/conf/{{item}}.xml"
-        dest: "$HOME/app/conf/{{item}}.xml"
+        src: "/home/LDC/ansible-inventory-check/conf/{{item}}.xml"
+        dest: "/home/LDC/app/conf/{{item}}.xml"
       loop:
         - app-conf1
         - app-conf2
+        - purchaseOrder
 
     - name: Replace the token in the configuration files
       replace:
@@ -40,7 +41,8 @@
       with_items:
         - {path: '/$HOME/app/conf/app-conf1.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJi'}
         - {path: '/$HOME/app/conf/app-conf2.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJiBhagwan'}
+        - {path: '/$HOME/app/conf/purchaseOrder.xml', regex: '(?<=\@)(.*?)(?=\@)', replace: 'GaneshJiBhagwan'}
 
-    - name: Read the token in the configuration file
-      set_fact:
-      myvalue: "{{ results.stdout | regex_search(regexp,'\\1') }}"
+    #- name: Read the token in the configuration file
+    #  set_fact:
+    #  myvalue: "{{ results.stdout | regex_search(regexp,'\\1') }}"
