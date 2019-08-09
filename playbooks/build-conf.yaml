@@ -15,7 +15,7 @@
 
     - name: Ansible date timestamp example
       debug:
-        var: ansible_date_time.epoch
+        var: "Replacement started at {{ansible_date_time.time}}"
 
     - name: Loop through the tasks
       include_tasks: read-replace-app-token.yaml
@@ -37,6 +37,6 @@
 
     - name: Ansible date timestamp example
       debug:
-          var: "Replacement finsihed at {{ansible_date_time.epoch}}"
+          var: "Replacement finsihed at {{ansible_date_time.time}}"
 
 
