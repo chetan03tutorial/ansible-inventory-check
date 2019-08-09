@@ -13,6 +13,34 @@
       with_items:
         - {file: app-conf1, ext: xml}
         - {file: app-conf2, ext: xml}
+        - {file: app-conf3, ext: xml}
+        - {file: app-conf4, ext: xml}
+        - {file: app-conf5, ext: xml}
+        - {file: app-conf6, ext: xml}
+        - {file: app-conf7, ext: xml}
+        - {file: app-conf8, ext: xml}
+        - {file: app-conf9, ext: xml}
+        - {file: app-conf10, ext: xml}
+        - {file: app-conf11, ext: xml}
+        - {file: app-conf12, ext: xml}
+        - {file: app-conf13, ext: xml}
+        - {file: app-conf14, ext: xml}
+        - {file: app-conf15, ext: xml}
+        - {file: app-conf16, ext: xml}
+        - {file: app-conf17, ext: xml}
+        - {file: app-conf18, ext: xml}
+        - {file: app-conf19, ext: xml}
+        - {file: app-conf20, ext: xml}
+        - {file: app-conf21, ext: xml}
+        - {file: app-conf22, ext: xml}
+        - {file: app-conf23, ext: xml}
+        - {file: app-conf24, ext: xml}
+        - {file: app-conf25, ext: xml}
+        - {file: app-conf26, ext: xml}
+        - {file: app-conf27, ext: xml}
+        - {file: app-conf28, ext: xml}
+        - {file: app-conf29, ext: xml}
+        - {file: app-conf30, ext: xml}
         - {file: purchaseOrder, ext: xml}
         - {file: token, ext: properties}
       loop_control:

@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1329f751-58e9-4877-a33a-03033651c448" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/conf/app-conf11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/app-conf12.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app-conf9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/token.properties" beforeDir="false" afterPath="$PROJECT_DIR$/conf/token.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +31,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1P8MrAlYjK2O25ppzEIc37kWlqa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/conf" />
