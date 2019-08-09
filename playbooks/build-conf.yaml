@@ -8,7 +8,8 @@
         path: /home/LDC/app/conf
         state: directory
 
-    - include_task: read-replace-app-token.yaml
+    - name: Loop through the tasks
+      include_task: read-replace-app-token.yaml
       with_items:
         - {file: app-conf1, ext: xml}
         - {file: app-conf2, ext: xml}
