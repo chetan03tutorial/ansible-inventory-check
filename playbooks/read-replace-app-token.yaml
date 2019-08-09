@@ -6,7 +6,7 @@
 
     - name: importing the file contents to variable
       slurp:
-        src: /home/LDC/app/conf/{{file}}
+        src: /home/LDC/app/conf/{{file.file}}.{{file.ext}}
       register: idb_endpoint_b64
 
     - name: Decoding the content from base 64 to normal text
