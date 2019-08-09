@@ -19,13 +19,13 @@
 
     - name: Find the tokens (@----@) in the fileString
       set_fact:
-        tokenObject: "{{ fileString | regex_findall(regexp)}}"
+        tokens: "{{ fileString | regex_findall(regexp)}}"
       vars:
         regexp: '(?<=\@)(.*?)(?=\@)'
 
     - name: Print Token Objects
       debug:
-        var: tokenObject
+        var: tokens
 
     #- debug:
     #    msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
@@ -35,17 +35,17 @@
     #- debug:
     #    var : myresult
 
-    - set_fact:
-        fileTokens : "{{tokenObject}}"
+    #- set_fact:
+    #    fileTokens : "{{tokenObject}}"
 
     - name: Replace the token in the configuration files
       replace:
         path: /home/LDC/app/conf/{{file}}
-        regexp: '{{tokens}}'
+        regexp: '{{token}}'
         #replace: 'GaneshJi'
-        replace: "{{ lookup('ini', '{{tokens}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
-      with_items: "{{fileTokens}}"
+        replace: "{{ lookup('ini', '{{token}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
+      with_items: "{{tokens}}"
       loop_control:
-        loop_var: tokens
+        loop_var: token
 
 
