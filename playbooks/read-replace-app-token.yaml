@@ -1,7 +1,6 @@
 -
-  name: Replace a token in application configuration
-  hosts: webserver
 
+  hosts: webserver
   tasks:
     - name: Copy configuration xml files to the target system
       copy:
