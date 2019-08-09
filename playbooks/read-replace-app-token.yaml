@@ -1,4 +1,4 @@
-
+-
   tasks:
     - name: Copy configuration xml files to the target system
       copy:
