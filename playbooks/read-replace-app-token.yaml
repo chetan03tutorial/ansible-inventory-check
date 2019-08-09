@@ -42,7 +42,7 @@
         regexp: '{{tokens.item}}'
         #replace: 'GaneshJi'
         #replace: "{{'{{item.item}}'}}"
-        replace: "{{{{ lookup('ini', '{{tokens.item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}}}"
+        replace: "{{ lookup('ini', '{{tokens.item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       with_items: "{{resultingToken}}"
       loop_control:
         loop_var: tokens
