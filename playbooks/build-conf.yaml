@@ -36,7 +36,7 @@
         loop_var: file
 
     - name: Ansible date timestamp example
-        debug:
+      debug:
           var: "Replacement finsihed at {{ansible_date_time.epoch}}"
 
 
