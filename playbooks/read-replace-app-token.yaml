@@ -38,7 +38,7 @@
 
     - name: Replace the token in the configuration files
       replace:
-        path: /home/LDC/app/conf/{{file.file}}.{{file.ext}}
+        path: /home/LDC/app/conf/{{file}}
         regexp: '{{tokens.item}}'
         #replace: 'GaneshJi'
         #replace: "{{'{{item.item}}'}}"
