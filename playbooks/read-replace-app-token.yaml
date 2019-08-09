@@ -1,5 +1,4 @@
--
-  tasks:
+
     - name: Copy configuration xml files to the target system
       copy:
         src: /home/LDC/ansible-inventory-check/conf/{{file.file}}.{{file.ext}}
