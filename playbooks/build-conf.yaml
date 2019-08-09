@@ -1,0 +1,22 @@
+-
+  name: Read a token using regular expression
+  hosts: webserver
+
+  tasks:
+    - name: Ensure a configuration directory exists in $HOME/app
+      file:
+        path: /home/LDC/app/conf
+        state: directory
+
+    - include_task: read-replace-app-token.yaml
+      with_items:
+        - {file: app-conf1, ext: xml}
+        - {file: app-conf2, ext: xml}
+        - {file: purchaseOrder, ext: xml}
+        - {file: token, ext: properties}
+      loop_control:
+        loop_var: file
+
+
+
+
