@@ -13,6 +13,10 @@
     #    src: /home/LDC/ansible-inventory-check/conf/token.properties
     #    dest: /home/LDC/app/conf/{{file}}
 
+    - name: Ansible date timestamp example
+      debug:
+        var="Replacement started at {{ansible_date_time.epoch}}"
+
     - name: Loop through the tasks
       include_tasks: read-replace-app-token.yaml
       with_items: "{{ lookup('file', '/home/LDC/ansible-inventory-check/conf/input.txt').splitlines() }}"
@@ -31,6 +35,8 @@
       loop_control:
         loop_var: file
 
-
+    - name: Ansible date timestamp example
+        debug:
+          var="Replacement finsihed at {{ansible_date_time.epoch}}"
 
 
