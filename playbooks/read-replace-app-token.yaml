@@ -40,11 +40,11 @@
 
     - name: Replace the token in the configuration files
       replace:
-        path: /home/LDC/app/conf/{{file}}
+        path: "/home/LDC/app/conf/{{file}}"
         regexp: '{{tokens.item}}'
         #replace: 'GaneshJi'
         #replace: "{{'{{item.item}}'}}"
-        replace: "{{ lookup('ini', '{{tokens.item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
+        replace: "{{ lookup('ini', '{{tokens}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       with_items: "{{fileTokens}}"
       loop_control:
         loop_var: tokens
