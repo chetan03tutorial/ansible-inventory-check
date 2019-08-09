@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <PurchaseOrders>
-    <PurchaseOrder PurchaseOrderNumber="@deploy.host.name@" OrderDate="@1999-10-20@">
+    <PurchaseOrder PurchaseOrderNumber="@deploy.host.name@" OrderDate="1999-10-20">
         <Address Type="@Shipping@">
             <Name>Ellen Adams</Name>
             <Street>123 Maple Street</Street>
