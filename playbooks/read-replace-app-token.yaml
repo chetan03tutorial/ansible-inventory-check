@@ -13,9 +13,9 @@
       set_fact:
         fileString: "{{ fileContent.content | b64decode }}"
 
-    - name: Print the file content on the screen
-      debug:
-        var: fileString
+    #- name: Print the file content on the screen
+    #  debug:
+    #    var: fileString
 
     - name: Find the tokens (@----@) in the fileString
       set_fact:
@@ -23,9 +23,9 @@
       vars:
         regexp: '(?<=\@)(.*?)(?=\@)'
 
-    - name: Print Token Objects
-      debug:
-        var: tokens
+    #- name: Print Token Objects
+    #  debug:
+    #    var: tokens
 
     #- debug:
     #    msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
