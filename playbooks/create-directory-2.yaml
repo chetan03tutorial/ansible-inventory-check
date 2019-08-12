@@ -54,7 +54,7 @@
         var : xmlresp
 
     - debug:
-        var: {{item}}
+        var: "{{item}}"
       with_subelements: "{{xmlresp.matches}}"
 
 
