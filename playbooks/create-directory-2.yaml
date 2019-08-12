@@ -2,6 +2,10 @@
   name: Create a directory app-conf in the $HOME/app/conf directory
   hosts: webserver
   tasks:
+    - name: Install tools
+      apt: name={{item}} state=present update_cache=yes
+      with_items:
+        - lxml
     - name: Ensure a configuration directory exists in $HOME/app
       file:
         path: $HOME/app/conf
