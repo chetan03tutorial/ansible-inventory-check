@@ -42,8 +42,8 @@
       replace:
         path: /home/LDC/app/conf/{{file}}
         regexp: '{{token}}'
-        replace: 'GaneshJi'
-        #replace: "{{ lookup('ini', '{{token}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
+        #replace: 'GaneshJi'
+        replace: "{{ lookup('ini', '{{token}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       with_items: "{{tokens}}"
       loop_control:
         loop_var: token
