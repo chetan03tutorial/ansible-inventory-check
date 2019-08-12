@@ -71,8 +71,8 @@
       copy:
         dest: $HOME/app/conf/configFiles.txt
         #content: "Jai Ganesh Ji Maharaj Ki Jai"
-        content: "item.Item.PartNumber"
-      loop: {{xmlresp.matches}}
+        content: "{{item.Item.PartNumber}}"
+      loop: "{{xmlresp.matches}}"
       #with_sequence: start=0 end={{xmlresp.matches | length -1}}
 
 
