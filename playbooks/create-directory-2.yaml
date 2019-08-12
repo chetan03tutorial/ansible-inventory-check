@@ -45,8 +45,9 @@
     - name: Read the xml file for the Items
       xml:
         path: $HOME/app/conf/purchaseOrder.xml
-        xpath: /PurchaseOrders/PurchaseOrder/Items/Item/@PartNumber
+        xpath: /PurchaseOrders/PurchaseOrder/Items/Item
         content: attribute
+        attribute: PartNumber
       register: xmlresp
 
     - name: Show the attribute values
