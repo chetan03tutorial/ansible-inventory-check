@@ -1,6 +1,2 @@
 app-conf1.xml
-app-conf2.xml
-app-conf3.xml
-app-conf4.xml
-app-conf5.xml
 
