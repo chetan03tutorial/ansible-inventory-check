@@ -26,7 +26,7 @@
 
     - name: Copy File
       copy:
-        src: $HOME/LDC/ansible-inventory-check/playbooks/purchaseOrder.xml
+        src: "$HOME/LDC/ansible-inventory-check/playbooks/purchaseOrder.xml"
         dest: $HOME/app/conf/purchaseOrder.xml
 
     - name: Read the xml file
