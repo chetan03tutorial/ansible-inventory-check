@@ -70,8 +70,9 @@
     - name: Copy the file
       copy:
         dest: $HOME/app/conf/configFiles.txt
-        content: "xmlresp.matches[{{ item }}].Item.PartNumber"
-      with_sequence: start=0 end={{xmlresp.matches | length -1}}
+        content: "Jai Ganesh Ji Maharaj Ki Jai"
+        #content: "xmlresp.matches[{{ item }}].Item.PartNumber"
+      #with_sequence: start=0 end={{xmlresp.matches | length -1}}
 
 
 
