@@ -21,7 +21,8 @@
       set_fact:
         tokens: "{{ fileString | regex_findall(regexp)}}"
       vars:
-        regexp: '(?<=\@)(.*?)(?=\@)'
+        #regexp: '(?<=\@)(.*?)(?=\@)'
+        regexp: '^.*(@.*@).*$'
 
     #- name: Print Token Objects
     #  debug:
