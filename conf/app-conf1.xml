@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PurchaseOrders>
     <PurchaseOrder PurchaseOrderNumber="@deploy.host.name@" OrderDate="1999-10-20">
-        <Address Type="Shipping">
+        <Address Type="@deploy.host.name@">
             <Name>Ellen Adams</Name>
             <Street>123 Maple Street</Street>
             <City>Mill Valley</City>
@@ -9,7 +9,7 @@
             <Zip>10999</Zip>
             <Country>USA</Country>
         </Address>
-        <Address Type="@deploy.host.name.billing@">
+        <Address Type="@deploy.host.billing@">
             <Name>Tai Yee</Name>
             <Street>8 Oak Avenue</Street>
             <City>Old Town</City>
@@ -19,13 +19,13 @@
         </Address>
         <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>
         <Items>
-            <Item PartNumber="872-AA">
+            <Item PartNumber="@deploy.host.billing@">
                 <ProductName>Lawnmower</ProductName>
                 <Quantity>1</Quantity>
                 <USPrice>148.95</USPrice>
                 <Comment>Confirm this is electric</Comment>
             </Item>
-            <Item PartNumber="926-AA">
+            <Item PartNumber="@deploy.host.billing@">
                 <ProductName>Baby Monitor</ProductName>
                 <Quantity>2</Quantity>
                 <USPrice>39.98</USPrice>
@@ -33,8 +33,8 @@
             </Item>
         </Items>
     </PurchaseOrder>
-    <PurchaseOrder PurchaseOrderNumber="99505" OrderDate="1999-10-22">
-        <Address Type="Shipping">
+    <PurchaseOrder PurchaseOrderNumber="@deploy.host.billing@" OrderDate="@deploy.host.billing@">
+        <Address Type="@deploy.host.billing@">
             <Name>Cristian Osorio</Name>
             <Street>456 Main Street</Street>
             <City>Buffalo</City>
@@ -42,7 +42,7 @@
             <Zip>98112</Zip>
             <Country>USA</Country>
         </Address>
-        <Address Type="Billing">
+        <Address Type="@deploy.host.billing@">
             <Name>Cristian Osorio</Name>
             <Street>456 Main Street</Street>
             <City>Buffalo</City>
@@ -52,15 +52,15 @@
         </Address>
         <DeliveryNotes>Please notify me before shipping.</DeliveryNotes>
         <Items>
-            <Item PartNumber="456-NM">
+            <Item PartNumber="@deploy.host.billing@">
                 <ProductName>Power Supply</ProductName>
                 <Quantity>1</Quantity>
                 <USPrice>45.99</USPrice>
             </Item>
         </Items>
     </PurchaseOrder>
-    <PurchaseOrder PurchaseOrderNumber="99504" OrderDate="1999-10-22">
-        <Address Type="Shipping">
+    <PurchaseOrder PurchaseOrderNumber="@deploy.host.billing@" OrderDate="@deploy.host.billing@">
+        <Address Type="@deploy.host.billing@">
             <Name>Jessica Arnold</Name>
             <Street>4055 Madison Ave</Street>
             <City>Seattle</City>
@@ -68,7 +68,7 @@
             <Zip>98112</Zip>
             <Country>USA</Country>
         </Address>
-        <Address Type="Billing">
+        <Address Type="@deploy.host.name@">
             <Name>Jessica Arnold</Name>
             <Street>4055 Madison Ave</Street>
             <City>Buffalo</City>
@@ -77,12 +77,12 @@
             <Country>USA</Country>
         </Address>
         <Items>
-            <Item PartNumber="898-AZ">
+            <Item PartNumber="@deploy.host.name@">
                 <ProductName>Computer Keyboard</ProductName>
                 <Quantity>1</Quantity>
                 <USPrice>29.99</USPrice>
             </Item>
-            <Item PartNumber="898-AM">
+            <Item PartNumber="@deploy.host.name@">
                 <ProductName>Wireless Mouse</ProductName>
                 <Quantity>1</Quantity>
                 <USPrice>14.99</USPrice>
