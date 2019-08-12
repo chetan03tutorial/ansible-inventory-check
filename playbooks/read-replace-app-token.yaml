@@ -24,9 +24,9 @@
         #regexp: '(?<=\@)(.*?)(?=\@)'
         regexp: '^.*(@.*@).*$'
 
-    #- name: Print Token Objects
-    #  debug:
-    #    var: tokens
+    - name: Print Token Objects
+      debug:
+        var: tokens
 
     #- debug:
     #    msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
