@@ -10,7 +10,7 @@
     #  register: fileContent
 
     - debug:
-        msg="{{lookup('file', /home/LDC/ansible-inventory-check/conf/{{file}}"
+        msg="lookup('file', '/home/LDC/ansible-inventory-check/conf/{{file}}')"
       register: fileContent
 
     - debug:
