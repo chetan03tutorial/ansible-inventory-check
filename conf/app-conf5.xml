@@ -59,7 +59,7 @@
             </Item>
         </Items>
     </PurchaseOrder>
-    <PurchaseOrder PurchaseOrderNumber="@deploy.host.billing@" OrderDate="@deploy.host.billing@">
+    <PurchaseOrder PurchaseOrderNumber="@deploy.host.billing@">
         <Address Type="@deploy.host.billing@">
             <Name>Jessica Arnold</Name>
             <Street>4055 Madison Ave</Street>
