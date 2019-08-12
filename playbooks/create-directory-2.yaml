@@ -53,6 +53,10 @@
     - name: Show the attribute values
       debug:
         var: "{{xmlresp.matches}}"
+      register: matchedValues
+
+    - debug:
+        var: matchedValues
 
     - copy:
         dest: $HOME/app/conf/configFiles.txt
