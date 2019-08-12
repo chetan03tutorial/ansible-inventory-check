@@ -17,6 +17,8 @@
       debug:
         var: ansible_date_time.time
 
+    - debug: msg="{{ lookup('pipe','date') }}"
+
     - name: Loop through the tasks
       include_tasks: read-replace-app-token.yaml
       with_items: "{{ lookup('file', '/home/LDC/ansible-inventory-check/conf/input.txt').splitlines() }}"
@@ -39,4 +41,5 @@
       debug:
           var: ansible_date_time.time
 
+    - debug: msg="{{ lookup('pipe','date') }}"
 
