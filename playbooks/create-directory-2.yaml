@@ -50,6 +50,9 @@
         attribute: PartNumber
       register: xmlresp
 
+    - debug:
+        var : xmlresp
+        
     - name: Show the attribute values
       debug:
         var: "{{xmlresp.matches}}"
