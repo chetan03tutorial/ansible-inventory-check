@@ -53,6 +53,10 @@
     - debug:
         var : xmlresp
 
+    - debug:
+        var: {{item}}
+      with_subelements: "{{xmlresp.matches}}"
+
 
 
     - copy:
