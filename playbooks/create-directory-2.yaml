@@ -68,10 +68,13 @@
 
     #- debug: var=filenames
 
-    - copy:
+    - name: Copy the file
+      copy:
         dest: $HOME/app/conf/configFiles.txt
-        content: "{{item.Item.PartNumber}}"
+        content: "{{part.Item.PartNumber}}"
         loop: "{{fileNameList}}"
+        loop_control:
+          loop_var: part
 
 
 
