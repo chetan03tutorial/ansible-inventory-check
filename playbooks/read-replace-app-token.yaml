@@ -21,6 +21,8 @@
       set_fact:
         fileString: "{{fileContent.msg}}"
 
+    - debug:
+        var: fileString
 
     #- name: Print the file content on the screen
     #  debug:
