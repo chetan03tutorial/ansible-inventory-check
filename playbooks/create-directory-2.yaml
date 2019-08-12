@@ -59,9 +59,8 @@
 
 
     - name: Record Files to look up for the tokens
-        debug:
-          var: xmlresp.matches[{{ item }}].Item.PartNumber
-        with_sequence: start=0 end={{xmlresp.matches | length -1}}
+      debug: var=xmlresp.matches[{{ item }}].Item.PartNumber
+      with_sequence: start=0 end={{xmlresp.matches | length -1}}
 
     - copy:
         dest: $HOME/app/conf/configFiles.txt
