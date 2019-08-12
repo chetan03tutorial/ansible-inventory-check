@@ -52,7 +52,7 @@
 
     - name: Show the attribute values
       debug:
-        var: xmlresp
+        var: "{{xmlresp.matches}}"
 
     - copy:
         dest: $HOME/app/conf/configFiles.txt
