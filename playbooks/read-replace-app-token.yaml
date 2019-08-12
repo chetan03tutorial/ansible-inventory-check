@@ -22,7 +22,6 @@
         tokens: "{{ fileString | regex_findall(regexp)}}"
       vars:
         regexp: '(?<=\@)(.*?)(?=\@)'
-        #regexp: '^.*(@.*@).*$'
 
     - name: Print Token Objects
       debug:
@@ -43,8 +42,6 @@
       replace:
         path: /home/LDC/app/conf/{{file}}
         regexp: '{{token}}'
-        after: '@'
-        before: '@'
         #replace: 'GaneshJi'
         replace: "{{ lookup('ini', '{{token}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       with_items: "{{tokens}}"
