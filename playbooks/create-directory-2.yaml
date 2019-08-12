@@ -5,7 +5,7 @@
     - name: Install tools
       apt: name={{item}} state=present update_cache=yes
       with_items:
-        - lxml
+        - python-lxml
     - name: Ensure a configuration directory exists in $HOME/app
       file:
         path: $HOME/app/conf
