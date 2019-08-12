@@ -30,7 +30,7 @@
 
     - debug:
         msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
-      loop: "{{tokenObject}}"
+      loop: "{{tokens}}"
       register: myresult
 
     - debug:
