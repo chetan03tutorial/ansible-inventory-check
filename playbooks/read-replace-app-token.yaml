@@ -27,13 +27,13 @@
       debug:
         var: tokens
 
-    - debug:
-        msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
-      loop: "{{tokens}}"
-      register: myresult
+    #- debug:
+    #    msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
+    #  loop: "{{tokens}}"
+    #  register: myresult
 
-    - debug:
-        var : myresult
+    #- debug:
+    #    var : myresult
 
     #- set_fact:
     #    fileTokens : "{{tokenObject}}"
