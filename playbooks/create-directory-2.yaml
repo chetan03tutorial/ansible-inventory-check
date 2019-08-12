@@ -2,10 +2,10 @@
   name: Create a directory app-conf in the $HOME/app/conf directory
   hosts: webserver
   tasks:
-    - name: Install tools
-      apt: name={{item}} state=present update_cache=yes
-      with_items:
-        - python-lxml
+    #- name: Install tools
+    #  apt: name={{item}} state=present update_cache=yes
+    #  with_items:
+    #    - python-lxml
     - name: Ensure a configuration directory exists in $HOME/app
       file:
         path: $HOME/app/conf
@@ -61,17 +61,17 @@
         var: fileNameList
 
 
-    - name: Record Files to look up for the tokens
-      debug: var=xmlresp.matches[{{ item }}].Item.PartNumber
-      with_sequence: start=0 end={{xmlresp.matches | length -1}}
-      register: filenames
+    #- name: Record Files to look up for the tokens
+    #  debug: var=xmlresp.matches[{{ item }}].Item.PartNumber
+    #  with_sequence: start=0 end={{xmlresp.matches | length -1}}
+    #  register: filenames
 
-    - debug: var=filenames
+    #- debug: var=filenames
 
     - copy:
         dest: $HOME/app/conf/configFiles.txt
-        content: "| {{item}}"
-        loop: "{{xmlresp.matches}}"
+        content: "{{item.Item.PartNumber}}"
+        loop: "{{fileNameList}}"
 
 
 
