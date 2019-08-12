@@ -3,41 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1329f751-58e9-4877-a33a-03033651c448" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf16.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf18.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf21.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf22.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf22.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf23.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf26.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf27.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf28.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf29.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf30.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf31.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf32.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf32.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf33.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf33.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf34.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf34.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf35.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf36.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf37.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf37.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf38.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf39.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf40.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf40.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app-conf9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app-conf9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/read-replace-app-token.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/read-replace-app-token.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
