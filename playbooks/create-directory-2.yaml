@@ -77,6 +77,8 @@
 
     - name: Create a file which contain list of all the parsed files
       file: path=/home/LDC/ansible-inventory-check/conf/input.txt state=touch
+
+    - name: Write down the list of files to be read for tokens
       lineinfile: path=/home/LDC/ansible-inventory-check/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present
       loop: "{{xmlresp.matches}}"
 
