@@ -53,9 +53,12 @@
     - debug:
         var : xmlresp
 
+    - name: Storing the content of the file
+      set_fact:
+        fileNameList: "{{xmlresp.matches}}"
+
     - debug:
-        var: "{{item}}"
-      with_items: "{{xmlresp.matches}}"
+        var: fileNameList
 
 
     - name: Record Files to look up for the tokens
@@ -68,7 +71,7 @@
     - copy:
         dest: $HOME/app/conf/configFiles.txt
         content: "| {{item}}"
-        loop: "{{filenames.result}}"
+        loop: "{{xmlresp.matches}}"
 
 
 
