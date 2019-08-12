@@ -19,13 +19,13 @@
         </Address>
         <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>
         <Items>
-            <Item PartNumber="872AA">
+            <Item PartNumber="app-conf1.xml">
                 <ProductName>Lawnmower</ProductName>
                 <Quantity>1</Quantity>
                 <USPrice>148.95</USPrice>
                 <Comment>Confirm this is electric</Comment>
             </Item>
-            <Item PartNumber="926AA">
+            <Item PartNumber="app-conf2.xml">
                 <ProductName>Baby Monitor</ProductName>
                 <Quantity>2</Quantity>
                 <USPrice>39.98</USPrice>
@@ -52,7 +52,7 @@
         </Address>
         <DeliveryNotes>Please notify me before shipping.</DeliveryNotes>
         <Items>
-            <Item PartNumber="456NM">
+            <Item PartNumber="app-conf3.xml">
                 <ProductName>Power Supply</ProductName>
                 <Quantity>1</Quantity>
                 <USPrice>45.99</USPrice>
@@ -77,7 +77,7 @@
             <Country>USA</Country>
         </Address>
         <Items>
-            <Item PartNumber="898AZ">
+            <Item PartNumber="app-conf4.xml">
                 <ProductName>Computer Keyboard</ProductName>
                 <Quantity>1</Quantity>
                 <USPrice>29.99</USPrice>
