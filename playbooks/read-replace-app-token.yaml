@@ -9,16 +9,18 @@
     #    src: /home/LDC/app/conf/{{file}}
     #  register: fileContent
 
+    #- name: Decoding the content from base 64 to normal text
+    #  set_fact:
+    #    fileString: "{{ fileContent.content | b64decode }}"
+
     - debug:
         msg="{{lookup('file', '/home/LDC/ansible-inventory-check/conf/{{file}}')}}"
       register: fileContent
 
-    - debug:
-        var: fileContent.msg
-
-    - name: Decoding the content from base 64 to normal text
+    - name: Storing the content of the file
       set_fact:
-        fileString: "{{ fileContent.content | b64decode }}"
+        fileString: "{{fileContent.msg}}"
+
 
     #- name: Print the file content on the screen
     #  debug:
