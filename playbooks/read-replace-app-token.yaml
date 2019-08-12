@@ -10,11 +10,11 @@
     #  register: fileContent
 
     - debug:
-        msg="lookup('file', '/home/LDC/ansible-inventory-check/conf/{{file}}')"
+        msg="{{lookup('file', '/home/LDC/ansible-inventory-check/conf/{{file}}')}}"
       register: fileContent
 
     - debug:
-        var: fileContent.msg
+        var: fileContent
 
     - name: Decoding the content from base 64 to normal text
       set_fact:
