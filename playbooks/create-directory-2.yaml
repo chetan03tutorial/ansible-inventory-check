@@ -61,10 +61,9 @@
         var: fileNameList
 
 
-    #- name: Record Files to look up for the tokens
-    #  debug: var=xmlresp.matches[{{ item }}].Item.PartNumber
-    #  with_sequence: start=0 end={{xmlresp.matches | length -1}}
-    #  register: filenames
+    - name: Record Files to look up for the tokens
+      debug: var=xmlresp.matches[{{ item }}].Item.PartNumber
+      with_sequence: start=0 end={{xmlresp.matches | length -1}}
 
     #- debug: var=filenames
 
@@ -72,7 +71,7 @@
       copy:
         dest: $HOME/app/conf/configFiles.txt
         content: "xmlresp.matches[{{ item }}].Item.PartNumber"
-        with_sequence: start=0 end={{xmlresp.matches | length -1}}
+      with_sequence: start=0 end={{xmlresp.matches | length -1}}
 
 
 
