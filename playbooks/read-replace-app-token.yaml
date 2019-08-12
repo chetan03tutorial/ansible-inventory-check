@@ -14,7 +14,7 @@
       register: fileContent
 
     - debug:
-        var: fileContent
+        var: fileContent.msg
 
     - name: Decoding the content from base 64 to normal text
       set_fact:
