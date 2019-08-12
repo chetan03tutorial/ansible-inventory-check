@@ -26,7 +26,7 @@
 
     - name: Copy File
       copy:
-        src:  playbooks/purchaseOrder.xml
+        src:  purchaseOrder.xml
         dest: $HOME/app/conf/purchaseOrder.xml
 
     - name: Read the xml file
