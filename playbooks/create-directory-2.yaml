@@ -57,7 +57,7 @@
     - copy:
         dest: $HOME/app/conf/configFiles.txt
         content: "| {{item.PartNumber}}"
-        loop: {{xmlresp.matches}}
+        loop: "{{xmlresp.matches}}"
 
 
 
