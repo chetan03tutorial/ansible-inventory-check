@@ -52,10 +52,10 @@
 
     - debug:
         var : xmlresp
-        
+
     - name: Show the attribute values
       debug:
-        var: "{{xmlresp.matches}}"
+        var: "{{xmlresp.matches.Item}}"
       register: matchedValues
 
     - debug:
