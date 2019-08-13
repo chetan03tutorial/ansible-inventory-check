@@ -73,4 +73,5 @@
       fetch:
         src: /home/LDC/app/conf/input.txt
         dest: "/home/LDC/ansible-inventory-check/conf/{{inventory_hostname}}/"
+        flat: true
 
