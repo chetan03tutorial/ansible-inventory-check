@@ -4,6 +4,7 @@
 
   environment:
     PROJECT_DIR: /home/LDC
+
   tasks:
 
 
@@ -18,7 +19,9 @@
         dest: $HOME/app/conf/purchaseOrder.xml
 
     - name: Create a file which contain list of all the parsed files
-      file: path= /home/LDC/app/conf/config.txt state=touch
+      file:
+        path: /home/LDC/app/conf/config.txt
+        state: touch
 
     #- name: Read the component configuration file
     #  xml:
