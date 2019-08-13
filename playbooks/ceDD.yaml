@@ -1,6 +1,6 @@
 -
   name: Deploy Calculate Engine in the single box
-  hosts: webserver
+  hosts: all
   tasks:
     #- name: Install tools
     #  apt: name={{item}} state=present update_cache=yes
