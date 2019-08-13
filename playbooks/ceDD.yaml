@@ -78,3 +78,26 @@
         dest: "/home/LDC/ansible-inventory-check/conf/{{inventory_hostname}}/"
         flat: true
 
+    - name: Ensure a configuration directory exists in $HOME/app
+      file:
+        path: /home/LDC/app/conf
+        state: directory
+
+    - name: Ansible date timestamp example
+        debug:
+          var: ansible_date_time.time
+
+    - debug: msg="{{ lookup('pipe','date') }}"
+
+    - name: Loop through the tasks
+        include_tasks: read-replace-app-token.yaml
+        with_items: "{{ lookup('file', '/home/LDC/ansible-inventory-check/conf/webserver/input.txt').splitlines() }}"
+        loop_control:
+          loop_var: file
+
+    - name: Ansible date timestamp example
+      debug:
+        var: ansible_date_time.time
+
+    - debug: msg="{{ lookup('pipe','date') }}"
+

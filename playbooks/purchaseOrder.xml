@@ -25,7 +25,7 @@
                 <USPrice>148.95</USPrice>
                 <Comment>Confirm this is electric</Comment>
             </Item>
-            <Item PartNumber="app-conf2.xml">
+            <Item PartNumber="app-conf1.xml">
                 <ProductName>Baby Monitor</ProductName>
                 <Quantity>2</Quantity>
                 <USPrice>39.98</USPrice>
