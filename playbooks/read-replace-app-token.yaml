@@ -39,8 +39,9 @@
     #    var: tokens
 
     - debug:
-        msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties default=NONE') }}"
-      when: msg != NONE
+        var: ack
+        ack: "{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties default=NONE') }}"
+      when: ack != NONE
       loop: "{{tokens}}"
       register: myresult
 
