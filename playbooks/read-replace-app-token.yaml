@@ -39,7 +39,7 @@
     #    var: tokens
 
     - debug:
-        var: "{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties default=NONE') }}"
+        var: msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties default=NONE') }}"
       loop: "{{tokens}}"
       register: myresult
 
