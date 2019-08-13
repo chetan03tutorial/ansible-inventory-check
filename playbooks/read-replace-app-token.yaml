@@ -4,22 +4,22 @@
         src: /home/LDC/ansible-inventory-check/conf/{{file}}
         dest: /home/LDC/app/conf/{{file}}
 
-    #- name: Reading the file contents on the target machines to a variable
-    #  slurp:
-    #    src: /home/LDC/app/conf/{{file}}
-    #  register: fileContent
-
-    #- name: Decoding the content from base 64 to normal text
-    #  set_fact:
-    #    fileString: "{{ fileContent.content | b64decode }}"
-
-    - debug:
-        msg="{{lookup('file', '/home/LDC/ansible-inventory-check/conf/{{file}}')}}"
+    - name: Reading the file contents on the target machines to a variable
+      slurp:
+        src: /home/LDC/app/conf/{{file}}
       register: fileContent
 
-    - name: Storing the content of the file
+    - name: Decoding the content from base 64 to normal text
       set_fact:
-        fileString: "{{fileContent.msg}}"
+        fileString: "{{ fileContent.content | b64decode }}"
+
+    #- debug:
+    #    msg="{{lookup('file', '/home/LDC/ansible-inventory-check/conf/{{file}}')}}"
+    #  register: fileContent
+
+    #- name: Storing the content of the file
+    #  set_fact:
+    #    fileString: "{{fileContent.msg}}"
 
     #- debug:
     #    var: fileString
@@ -39,7 +39,8 @@
     #    var: tokens
 
     - debug:
-        msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
+        msg="{{ lookup('ini', '{{item}} type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties default=NONE') }}"
+      when: msg != NONE
       loop: "{{tokens}}"
       register: myresult
 
