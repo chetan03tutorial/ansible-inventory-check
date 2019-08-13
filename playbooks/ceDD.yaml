@@ -62,7 +62,7 @@
 
 
     - name: Write down the list of files to be read for tokens
-      lineinfile: path=/home/LDC/app/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present create=yes
+      lineinfile: path=/home/LDC/app/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present
       loop: "{{xmlresp.matches}}"
 
     #- name: create a file to store the list of configuration files
