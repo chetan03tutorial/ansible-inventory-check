@@ -52,7 +52,7 @@
     - name: Replace the token in the configuration files
       replace:
         path: /home/LDC/app/conf/{{file}}
-        regexp: '{{token}}'
+        regexp: '@{{token}}@'
         #replace: 'GaneshJi'
         replace: "{{ lookup('ini', '@{{token}}@ type=properties file=/home/LDC/ansible-inventory-check/conf/token.properties') }}"
       with_items: "{{tokens}}"
