@@ -70,5 +70,7 @@
     #  loop: "{{xmlresp.matches}}"
 
     - name: Fetch the file from the remote machine
-      fetch: src=/home/LDC/app/conf/input.txt dest=/home/LDC/ansible-inventory-check/conf/input.txt
+      fetch:
+        src: /home/LDC/app/conf/input.txt
+        dest: "/home/LDC/ansible-inventory-check/conf/{{inventory_hostname}}/"
 
