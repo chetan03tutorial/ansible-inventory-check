@@ -1,0 +1,8 @@
+---
+- hosts: webserver
+  #become: true
+  tasks:
+    - name: Install Required Tools
+      apt: name={{item}} state=present update_cache=yes
+      with_items:
+        - python-lxml

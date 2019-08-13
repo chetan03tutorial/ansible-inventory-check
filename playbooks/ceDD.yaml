@@ -1,32 +1,35 @@
 -
   name: Deploy Calculate Engine in the single box
   hosts: webserver
+
+  environment:
+    PROJECT_DIR: /home/LDC
   tasks:
-    #- name: Install tools
-    #  apt: name={{item}} state=present update_cache=yes
-    #  with_items:
-    #    - python-lxml
+
 
     - name: Ensure a configuration directory exists in $HOME/app
       file:
         path: $HOME/app/conf
         state: directory
 
-    - name: Copy application configuration files
+    - name: Copy component configuration file
       copy:
         src:  purchaseOrder.xml
         dest: $HOME/app/conf/purchaseOrder.xml
 
-    - name: Read the application-configuration.xml
-      xml:
-        path: $HOME/app/conf/purchaseOrder.xml
-        xpath: /PurchaseOrders/PurchaseOrder/Items/Item
-        content: text
-      register: hits
-    - debug:
-        var: hits
+    - name: Create a file which contain list of all the parsed files
+      file: path= /home/LDC/app/conf/config.txt state=touch
 
-    - name: Read application configuration xml file to parse the list of other configuration, sql and scripting files
+    #- name: Read the component configuration file
+    #  xml:
+    #    path: $HOME/app/conf/purchaseOrder.xml
+    #    xpath: /PurchaseOrders/PurchaseOrder/Items/Item
+    #    content: text
+    #  register: hits
+    #- debug:
+    #    var: hits
+
+    - name: Read component configuration on the target machine to parse the list of other configuration, sql and scripting files
       xml:
         path: $HOME/app/conf/purchaseOrder.xml
         xpath: /PurchaseOrders/PurchaseOrder/Items/Item
@@ -53,10 +56,7 @@
     #  loop: "{{xmlresp.matches}}"
 
 
-    - name: Create a file which contain list of all the parsed files
-      file:
-        path: /home/LDC/app/conf/input.txt
-        state: touch
+
 
     - name: Write down the list of files to be read for tokens
       lineinfile: path=/home/LDC/app/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present create=yes
