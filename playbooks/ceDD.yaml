@@ -1,6 +1,6 @@
 -
   name: Deploy Calculate Engine in the single box
-  hosts: all
+  hosts: webserver
   tasks:
     #- name: Install tools
     #  apt: name={{item}} state=present update_cache=yes
@@ -53,19 +53,22 @@
     #  loop: "{{xmlresp.matches}}"
 
 
-    #- name: Create a file which contain list of all the parsed files
-    #  file:
-    #    path: /home/LDC/app/conf/input.txt
-    #    state: touch
-
-    #- name: Write down the list of files to be read for tokens
-    #  lineinfile: path=/home/LDC/app/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present create=yes
-    #  loop: "{{xmlresp.matches}}"
-
-    - name: create a file to store the list of configuration files
-      shell: cat > /home/LDC/app/conf/input.txt
+    - name: Create a file which contain list of all the parsed files
+      file:
+        path: /home/LDC/app/conf/input.txt
+        state: touch
 
     - name: Write down the list of files to be read for tokens
-      shell: echo '{{item.Item.PartNumber}}' >> /home/LDC/app/conf/input.txt
+      lineinfile: path=/home/LDC/app/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present create=yes
       loop: "{{xmlresp.matches}}"
+
+    #- name: create a file to store the list of configuration files
+    #  shell: cat > /home/LDC/app/conf/input.txt
+
+    #- name: Write down the list of files to be read for tokens
+    #  shell: echo '{{item.Item.PartNumber}}' >> /home/LDC/app/conf/input.txt
+    #  loop: "{{xmlresp.matches}}"
+
+    - name: Fetch the file from the remote machine
+      fetch: src=/home/LDC/app/conf/input.txt dest=/home/LDC/ansible-inventory-check/conf/input.txt
 
