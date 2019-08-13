@@ -6,3 +6,7 @@
       apt: name={{item}} state=present update_cache=yes
       with_items:
         - python-lxml
+
+    - name: Replace Tokens module
+      include_tasks: ceDD.yaml
+
