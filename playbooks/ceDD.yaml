@@ -58,9 +58,9 @@
     #    path: /home/LDC/app/conf/input.txt
     #    state: touch
 
-    - name: Write down the list of files to be read for tokens
-      lineinfile: path=/home/LDC/app/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present create=yes
-      loop: "{{xmlresp.matches}}"
+    #- name: Write down the list of files to be read for tokens
+    #  lineinfile: path=/home/LDC/app/conf/input.txt line={{item.Item.PartNumber}} create=yes state=present create=yes
+    #  loop: "{{xmlresp.matches}}"
 
     - name: Write down the list of files to be read for tokens
       shell: cat {{item.Item.PartNumber}} > /home/LDC/app/conf/input.txt
