@@ -114,12 +114,12 @@
         state: link
 
     - name: create a symlink which points to the previous version
-        file: /home/LDC/app/conf
+      file: /home/LDC/app/conf
         dest: /home/LDC/previous
         state: link
 
     - name: find out the value of symlink
-        stat: path=/home/LDC/previous
+      stat: path=/home/LDC/previous
       register: symlink
 
     - debug: var=symlink
