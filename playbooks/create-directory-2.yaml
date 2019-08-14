@@ -20,13 +20,13 @@
         - app/source
         - app/meta-inf
 
-    - name : remove multiple directories created in the step above
-      file:
-        path: "$HOME/{{item}}"
-        state: absent
-      loop:
-        - app/source
-        - app/meta-inf
+    #- name : remove multiple directories created in the step above
+    #  file:
+    #    path: "$HOME/{{item}}"
+    #    state: absent
+    #  loop:
+    #    - app/source
+    #    - app/meta-inf
 
     - name: Copy File
       copy:
