@@ -114,7 +114,8 @@
         state: link
 
     - name: create a symlink which points to the previous version
-      file: /home/LDC/app/conf
+      file:
+        src: /home/LDC/app/conf
         dest: /home/LDC/previous
         state: link
 
