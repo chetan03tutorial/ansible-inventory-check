@@ -131,6 +131,18 @@
 
     - debug: var=symlink2
 
+
+    - name: remove old symlink
+      file:
+        path: /home/LDC/previous
+        state: absent
+
+    - name: create new symlink which points somewhere else
+      file:
+        src: /home/LDC/previous
+        dest: "{{symlink.stat.lnk_source}}"
+        state: link
+
     - name: Ansible date timestamp example
       debug:
         var: ansible_date_time.time
