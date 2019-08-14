@@ -113,6 +113,17 @@
         dest: /home/LDC/current
         state: link
 
+    - name: create a symlink which points to the previous version
+        file: /home/LDC/app/conf
+        dest: /home/LDC/previous
+        state: link
+
+    - name: find out the value of symlink
+        stat: path=/home/LDC/previous
+      register: symlink
+
+    - debug: var=symlink
+
     - name: Ansible date timestamp example
       debug:
         var: ansible_date_time.time
