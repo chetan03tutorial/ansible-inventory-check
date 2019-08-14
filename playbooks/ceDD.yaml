@@ -126,7 +126,7 @@
     - debug: var=symlink
 
     - name: find out the value of symlink
-      stat: path=/home/LDC/previous
+      stat: path=/home/LDC/current
       register: symlink2
 
     - debug: var=symlink2
@@ -140,7 +140,7 @@
     - name: create new symlink which points somewhere else
       file:
         src: /home/LDC/previous
-        dest: "{{symlink.stat.lnk_source}}"
+        dest: "{{symlink2.stat.lnk_source}}"
         state: link
 
     - name: Ansible date timestamp example
