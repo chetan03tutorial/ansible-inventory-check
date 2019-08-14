@@ -115,7 +115,7 @@
 
     - name: create a symlink which points to the previous version
       file:
-        src: /home/app/source
+        src: /home/LDC/app/source
         dest: /home/LDC/previous
         state: link
 

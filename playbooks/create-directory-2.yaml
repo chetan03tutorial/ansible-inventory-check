@@ -13,7 +13,7 @@
 
     - name: create multiple directory in the $HOME
       file:
-        path: "$HOME/{{item}}"
+        path: "/home/LDC/{{item}}"
         state: directory
       loop:
         - app/conf
