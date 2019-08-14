@@ -107,9 +107,16 @@
       loop_control:
         loop_var: file
 
+    - name: Create the symlink to the extracted code location
+      file:
+        src: /home/LDC/app/conf
+        dest: /home/LDC/current
+
     - name: Ansible date timestamp example
       debug:
         var: ansible_date_time.time
 
     - debug: msg="{{ lookup('pipe','date') }}"
+
+
 
