@@ -2,5 +2,5 @@
   name: Test connectivity with the target system
   hosts: webserver
   tasks:
-    - name: Ping Test
-      ping:
+    - name: Create User
+      user: name="ceuat1" group="ssh"
