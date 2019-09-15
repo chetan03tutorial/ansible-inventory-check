@@ -10,5 +10,5 @@
     #- name: Create User
     #  user: name="ceuat1" group="ssh"
 
-    debug:
-      var=password
+    - name: Printing the password
+      debug: var=password
