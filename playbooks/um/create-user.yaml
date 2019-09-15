@@ -2,5 +2,13 @@
   name: Test connectivity with the target system
   hosts: webserver
   tasks:
-    - name: Create User
-      user: name="ceuat1" group="ssh"
+
+    - name: Generate a password
+      pause: prompt="Enter a password"
+      register: password
+
+    #- name: Create User
+    #  user: name="ceuat1" group="ssh"
+
+    debug:
+      var=password
