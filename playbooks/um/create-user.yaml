@@ -14,5 +14,5 @@
       set_fact: upassword="{{password.user_input}}"
 
     - name: printing password in encoded format
-      debug: var="{{upassword | password_hash('sha512')}}"
-      
+      debug:
+        msg="{{upassword | password_hash('sha512')}}"
