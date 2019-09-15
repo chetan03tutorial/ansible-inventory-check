@@ -10,5 +10,9 @@
     #- name: Create User
     #  user: name="ceuat1" group="ssh"
 
-    - name: Printing the password
-      debug: var=password
+    - name: Saving the user password
+      set_fact: upassword="{{password.user_input}}"
+
+    - name: printing password in encoded format
+      debug: var="{{upassword | password_hash('sha512')}}"
+      
