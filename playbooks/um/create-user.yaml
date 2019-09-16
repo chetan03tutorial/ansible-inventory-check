@@ -1,7 +1,16 @@
 -
   name: Test connectivity with the target system
   hosts: webserver
+  vars_prompt:
+    - name: username
+      prompt: "Enter the username {{zone}}"
+      private: no
+
   tasks:
+
+    - name: Priting the value
+      debug:
+        var: {{zone}}
 
     - name: Generate a password
       pause: prompt="Enter a password"
@@ -16,3 +25,5 @@
     - name: printing password in encoded format
       debug:
         msg="{{upassword | password_hash('sha512')}}"
+
+    - name: creating user
