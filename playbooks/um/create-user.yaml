@@ -29,5 +29,3 @@
     - name: printing password in encoded format
       debug:
         msg="{{upassword | password_hash('sha512')}}"
-
-    - name: creating user
