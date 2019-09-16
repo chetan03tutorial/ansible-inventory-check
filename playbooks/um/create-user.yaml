@@ -10,7 +10,11 @@
 
     - name: Priting the value
       debug:
-        var: {{zone}}
+        msg="{{zone}}"
+
+    - name: Printing the properties
+      debug:
+        var: zone
 
     - name: Generate a password
       pause: prompt="Enter a password"
