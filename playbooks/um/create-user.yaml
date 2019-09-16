@@ -14,7 +14,7 @@
 
     - name: Printing the properties
       debug:
-        var: zone
+        var: webserver-host
 
     - name: Generate a password
       pause: prompt="Enter a password"
