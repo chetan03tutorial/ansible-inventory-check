@@ -2,13 +2,20 @@
   name: Test connectivity with the target system
   hosts: webserver
   vars_prompt:
-    - name: username
-      prompt: "Enter the password for {{ce_app_user}}"
-      private: no
+    - name: "password"
+      prompt: "Enter the password"
+      private: yes
+      encrypt: "sha512_crypt"
+      confirm: yes
+
 
   tasks:
 
-    - name: Priting the value
+    - name: Printing the password
+      debug:
+        var: password
+        
+    - name: Priting the application username
       debug:
         msg="{{ce_app_user}}"
 
