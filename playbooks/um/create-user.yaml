@@ -1,10 +1,10 @@
 -
   name: Test connectivity with the target system
   hosts: webserver
-  vars_prompt:
-    - name: username
-      prompt: "Enter the username {{zone}}"
-      private: no
+  #vars_prompt:
+    #- name: username
+      #prompt: "Enter the username {{zone}}"
+      #private: no
 
   tasks:
 
