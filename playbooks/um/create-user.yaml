@@ -1,24 +1,16 @@
 -
   name: Test connectivity with the target system
   hosts: webserver
-  #vars_prompt:
-    #- name: username
-      #prompt: "Enter the username {{zone}}"
-      #private: no
+  vars_prompt:
+    - name: username
+      prompt: "Enter the password for {{ce_app_user}}"
+      private: no
 
   tasks:
 
     - name: Priting the value
       debug:
         msg="{{ce_app_user}}"
-
-    - name: Printing the properties
-      debug:
-        var: ce_app_user
-
-    #- name: Printing the properties
-      #debug:
-        #var: webserver-host
 
     - name: Generate a password
       pause: prompt="Enter a password"
