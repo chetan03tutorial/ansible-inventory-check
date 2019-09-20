@@ -17,7 +17,7 @@
 
 
     - name : Store the password in a variable
-      command: echo "{{password | password_hash('sha512')}}"
+      command: "{{password | password_hash('sha512')}}"
       register: upassword
 
     - debug: var=upassword
