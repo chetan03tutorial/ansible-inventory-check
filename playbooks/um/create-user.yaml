@@ -5,6 +5,7 @@
     - name: "password"
       prompt: "Enter the password"
       private: yes
+      #encrypt: "sha512_crypt"
       confirm: yes
 
 
@@ -13,6 +14,9 @@
     - name: Printing the password
       debug:
         var: password
+
+    - name: printing host properties
+      debug: var="{{webserver-host}}"
 
     - name: Priting the application username
       debug:
