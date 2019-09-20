@@ -15,8 +15,8 @@
       debug:
         var: password
 
-    - name: saving the password
-      vars:
+
+    - vars:
         upassword="{{password | password_hash('sha512')}}"
 
 
