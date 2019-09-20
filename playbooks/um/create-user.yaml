@@ -17,7 +17,7 @@
 
 
     - name : Store the password in a variable
-      command: pass=`echo "{{password | password_hash('sha512')}}"`
+      command: echo "{{password | password_hash('sha512')}}"
       register: upassword
 
     - debug: var=upassword
@@ -25,7 +25,7 @@
 
     - name: Priting the application username
       debug:
-        msg="{{ce_app_user}}/{{upassword}}"
+        msg="{{ce_app_user}}"
 
     #- name: Generate a password
     #  pause: prompt="Enter a password"
