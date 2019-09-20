@@ -16,8 +16,9 @@
         var: password
 
 
-    - vars:
-        upassword="{{password | password_hash('sha512')}}"
+    - name : Store the password in a variable
+      debug: var="{{password | password_hash('sha512')}}"
+      register: upassword
 
 
     - name: Priting the application username
