@@ -15,24 +15,25 @@
       debug:
         var: password
 
-    - name: printing host properties
-      debug:
-        msg="{{host_vars['webserverhost']}}"
+    - name: saving the password
+      vars:
+        upassword="{{password | password_hash('sha512')}}"
+
 
     - name: Priting the application username
       debug:
-        msg="{{ce_app_user}}"
+        msg="{{ce_app_user}}/{{upassword}}"
 
-    - name: Generate a password
-      pause: prompt="Enter a password"
-      register: password
+    #- name: Generate a password
+    #  pause: prompt="Enter a password"
+    #  register: password
 
     #- name: Create User
     #  user: name="ceuat1" group="ssh"
 
-    - name: Saving the user password
-      set_fact: upassword="{{password.user_input}}"
+    #- name: Saving the user password
+    #  set_fact: upassword="{{password.user_input}}"
 
-    - name: printing password in encoded format
-      debug:
-        msg="{{upassword | password_hash('sha512')}}"
+    #- name: printing password in encoded format
+    #  debug:
+    #    msg="{{upassword | password_hash('sha512')}}"
