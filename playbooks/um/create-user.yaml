@@ -16,7 +16,8 @@
         var: password
 
     - name: printing host properties
-      debug: var="{{webserver-host}}"
+      debug:
+        var: webserverhost
 
     - name: Priting the application username
       debug:
