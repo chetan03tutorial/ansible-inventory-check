@@ -17,8 +17,10 @@
 
 
     - name : Store the password in a variable
-      debug: var= password | password_hash('sha512')
+      command: echo "{{password | password_hash('sha512')}}"
       register: upassword
+
+      debug: var=upassword
 
 
     - name: Priting the application username
