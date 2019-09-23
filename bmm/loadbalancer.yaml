@@ -12,7 +12,7 @@
       service: name=nginx state=started enabled=yes
 
     - name: Create the configuration file for the nginx
-      template: src=templates/nginx.conf.j2 dest=/etc/ngnix/sites-available/webapp mode=0644
+      template: src=templates/nginx.conf.j2 dest=/etc/nginx/sites-available/webapp mode=0644
       notify: Restart nginx
 
     - name: Disable default site of the nginx
@@ -20,7 +20,7 @@
       notify: Restart nginx
 
     - name: Activate the load balancing for the webapp
-      file: src=/etc/ngnix/site-available/webapp dest=/etc/ngnix/sites-enabled/webapp state=link
+      file: src=/etc/ngnix/site-available/webapp dest=/etc/nginx/sites-enabled/webapp state=link
       notify: Restart ngnix
 
   handlers:
