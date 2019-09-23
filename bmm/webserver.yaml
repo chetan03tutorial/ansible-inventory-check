@@ -11,4 +11,4 @@
         #- apache
 
     - name: Checkout the project from Github
-      git: repo='git@github.com:chetan03tutorial/bookmymovie.git' dest=$HOME/bookmymovie
+      git: repo='https://github.com/chetan03tutorial/bookmymovie.git' dest=$HOME/bookmymovie
