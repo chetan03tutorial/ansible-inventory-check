@@ -1,6 +1,6 @@
 -
   name: Setting up the load balancer layer
-  hosts: eastzone
+  hosts: loadbalancers
   tasks:
 
     - name: Install Dependencies for the loadbalancer
