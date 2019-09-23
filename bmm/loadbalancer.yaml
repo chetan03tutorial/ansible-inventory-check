@@ -7,3 +7,6 @@
       apt: name={{item}} state=present update_cache=yes
       with_items:
         - nginx
+
+    - name: Ensure nginx is started
+      service: name=nginx state=started enabled=yes
