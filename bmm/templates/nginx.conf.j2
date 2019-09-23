@@ -1,6 +1,6 @@
 upstream webapp {
 {% for server in groups.webservers %}
-  server {{ server }};
+  server {{ server.ansible_host }};
 {% endfor %}
 }
 
@@ -10,5 +10,5 @@ server {
   location / {
     proxy_pass http://webapp;
   }
-  
+
 }
