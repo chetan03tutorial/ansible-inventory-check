@@ -3,7 +3,7 @@
   hosts: eastzone
   tasks:
 
-    - name: Install ngnix
+    - name: Install dependencies for the webservers
       apt: name={{item}} state=present update_cache=yes
       become: true
       with_items:
