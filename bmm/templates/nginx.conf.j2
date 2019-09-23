@@ -1,6 +1,6 @@
 upstream webapp{
 
-{% for server in groups.webserver %}
+{% for server in groups.webservers %}
   server {{ server }};
 {% endfor %}
 
