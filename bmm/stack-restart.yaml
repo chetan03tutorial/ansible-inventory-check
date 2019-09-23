@@ -1,0 +1,20 @@
+---
+  - hosts: loadbalancers
+    tasks:
+      service: name=nginx state=stopped
+
+  - hosts: webservers
+    tasks:
+      service: name=webserver state=stopped
+
+  - hosts: databases
+    tasks:
+      service: name=nginx state=stopped
+
+  - hosts: webservers
+    tasks:
+      service: name=webserver state=started
+
+  - hosts: loadbalancers
+    tasks:
+      service: name=nginx state=started
