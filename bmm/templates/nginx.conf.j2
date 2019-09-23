@@ -1,12 +1,10 @@
-upstream webapp{
-
+upstream webapp {
 {% for server in groups.webservers %}
   server {{ server }};
 {% endfor %}
-
 }
 
-sever{
+sever {
   listen: 80;
 
   location / {
