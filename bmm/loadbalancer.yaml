@@ -1,4 +1,4 @@
----
+-
   name: Setting up the load balancer layer
   hosts: eastzone
   tasks:
