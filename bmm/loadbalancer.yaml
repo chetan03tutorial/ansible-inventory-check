@@ -20,7 +20,7 @@
       notify: Restart nginx
 
     - name: Activate the load balancing for the webapp
-      file: src=/etc/nginx/site-available/webapp dest=/etc/nginx/sites-enabled/webapp state=link
+      file: src=/etc/nginx/sites-available/webapp dest=/etc/nginx/sites-enabled/webapp state=link
       notify: Restart nginx
 
   handlers:
