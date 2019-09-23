@@ -11,6 +11,7 @@
         - app-conf1.xml
         - app-conf2.xml
         - token.properties
+
     - name: importing the file contents to variable
       slurp:
         src: $HOME/app/conf/purchaseOrder.xml
@@ -22,4 +23,3 @@
 
     - debug:
         var: idb_endpoint
-
