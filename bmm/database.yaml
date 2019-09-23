@@ -10,3 +10,10 @@
 
     - name: Ensure mysql-server is running on my target machine
       service: name=mysql state=started enabled=yes
+
+    - name: Do something and then restart the mysql service
+      command : echo $HOME
+
+  handlers:
+    - name: Restart mysql
+      service: name=mysql state=started enabled=yes
