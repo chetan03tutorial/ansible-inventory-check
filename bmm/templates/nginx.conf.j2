@@ -5,7 +5,7 @@ upstream webapp {
 }
 
 server {
-  listen: 80;
+  listen 80;
 
   location / {
     proxy_pass http://webapp;
