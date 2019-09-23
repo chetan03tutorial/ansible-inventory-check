@@ -3,8 +3,11 @@
   hosts: eastzone
   tasks:
 
-    - name: Install dependencies for the webservers
-      apt: name={{item}} state=present update_cache=yes
-      become: true
-      with_items:
-        - apache
+    #- name: Install dependencies for the webservers
+    #  apt: name={{item}} state=present update_cache=yes
+    #  become: true
+    #  with_items:
+    #    - apache
+
+    - name: Checkout the project from Github
+      git: repo='git@github.com:chetan03tutorial/bookmymovie.git' dest=$HOME/bookmymovie
