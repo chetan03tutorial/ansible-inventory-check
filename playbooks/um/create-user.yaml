@@ -8,13 +8,11 @@
       #encrypt: "sha512_crypt"
       confirm: yes
 
-
   tasks:
 
     - name: Printing the password
       debug:
         var: password
-
 
     - name : Store the password in a variable
       command: echo "{{password | password_hash('sha512')}}"
@@ -22,21 +20,17 @@
 
     - debug: var=upassword.stdout
 
-
     - name: Priting the application username
       debug:
-        msg="{{ce_app_user}}/password={{upassword.stdout}}"
+        msg="{{ce_app_user}}"
 
+############################## PAUSE MODULE #############################################################
     #- name: Generate a password
     #  pause: prompt="Enter a password"
     #  register: password
 
+############################# USER MODULE ##############################################################
     #- name: Create User
     #  user: name="ceuat1" group="ssh"
 
-    #- name: Saving the user password
-    #  set_fact: upassword="{{password.user_input}}"
-
-    #- name: printing password in encoded format
-    #  debug:
-    #    msg="{{upassword | password_hash('sha512')}}"
+    
