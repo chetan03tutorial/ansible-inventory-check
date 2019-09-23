@@ -16,12 +16,12 @@
       notify: Restart nginx
 
     - name: Disable default site of the nginx
-      file: path=/etc/ngnix/sites-enabled/default state=absent
+      file: path=/etc/nginx/sites-enabled/default state=absent
       notify: Restart nginx
 
     - name: Activate the load balancing for the webapp
-      file: src=/etc/ngnix/site-available/webapp dest=/etc/nginx/sites-enabled/webapp state=link
-      notify: Restart ngnix
+      file: src=/etc/nginx/site-available/webapp dest=/etc/nginx/sites-enabled/webapp state=link
+      notify: Restart nginx
 
   handlers:
      - name: Restart nginx
