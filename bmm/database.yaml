@@ -1,6 +1,6 @@
 -
   name: Setting up the load balancer layer
-  hosts: eastzone
+  hosts: databases
   tasks:
 
     - name: Install dependencies for the databases
@@ -8,3 +8,6 @@
       become: true
       with_items:
         - mysql-server
+
+    - name: Ensure mysql-server is running on my target machine
+      service: name=mysql state=started enabled=yes

@@ -3,7 +3,7 @@
   hosts: control
   tasks:
 
-    - name: Install dependencies for the databases
+    - name: Install dependencies for the ansible host machine
       apt: name={{item}} state=present update_cache=yes
       become: true
       with_items:
