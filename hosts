@@ -4,7 +4,7 @@ webserver ansible_host=172.17.0.3 ansible_ssh_pass=a@1234
 [loadbalancer]
 lb01
 
-[webserver]
+[webservers]
 webserver ansible_host=172.17.0.3 ansible_ssh_pass=a@1234
 
 [database]
