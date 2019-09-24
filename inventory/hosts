@@ -1,14 +1,13 @@
-[eastzone]
-webserver ansible_host=172.17.0.3 ansible_ssh_pass=a@1234
-
 [loadbalancers]
-webserver ansible_host=172.17.0.3 ansible_ssh_pass=a@1234
+lb01
+
+[databases]
+db01
 
 [webservers]
 webserver ansible_host=172.17.0.3 ansible_ssh_pass=a@1234
 
-[databases]
-database ansible_host=172.17.0.4 ansible_ssh_pass=a@1234
+
 
 [ansible-host]
 control ansible_host=172.17.0.2 ansible_connection=local
