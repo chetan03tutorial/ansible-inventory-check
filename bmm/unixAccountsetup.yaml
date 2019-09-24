@@ -1,4 +1,4 @@
----
+
   - name: Create Application Account on Unix machine
     hosts: webservers
     vars_prompt:
@@ -7,7 +7,7 @@
         private: no
 
       - name: password
-        prompt: "Enter the password for the {{username}}"
+        prompt: "Enter the password for the username"
         private: yes
         confirm: yes
 
