@@ -1,6 +1,6 @@
 upstream webapp {
 {% for server in groups.webservers %}
-  server {{ server.ansible_host }};
+  server {{ server }};
 {% endfor %}
 }
 
