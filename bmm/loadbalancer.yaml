@@ -13,7 +13,7 @@
       notify: Restart nginx
 
     - name: Activate the load balancing for the webapp
-      file: src=/etc/nginx/sites-available/default dest=/etc/nginx/sites-enabled/webserver state=link
+      file: src=/etc/nginx/sites-available/default dest=/etc/nginx/sites-enabled/webapp state=link
       notify: Restart nginx
 
     - name: Disable default site of the nginx
