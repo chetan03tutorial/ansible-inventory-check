@@ -28,4 +28,4 @@
       - name: Creating the user with "{{username}}"
         user: name={{username}} password={{upassword.stdout}} group=ssh
               append=yes shell=/bin/bash
-        when: (admin|lower == no)
+        when: (admin|lower == 'no')
