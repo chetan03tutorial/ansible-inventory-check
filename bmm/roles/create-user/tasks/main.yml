@@ -29,7 +29,7 @@
     register: upassword
 
   - name: Creating the user with "{{username.user_input}}"
-    user: name={{username.user_input}} password={{upassword.stdout}} groups=ssh
+    user: name={{username.user_input}} password={{upassword.stdout}} group="ssh"
           append=yes shell=/bin/bash
     when: (role|lower == 'no')
 
