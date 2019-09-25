@@ -24,7 +24,7 @@
   - name: Creating the user with "{{username.user_input}}"
     user: name={{username.user_input}} password={{upassword.stdout}} group=ssh
           append=yes shell=/bin/bash
-    when: (admin|lower == 'no')
+    when: (role|lower == 'no')
 
   - name: Creating home directory for {{username}}
     file: path=/home/{{username.user_input}} state=directory owner={{username.user_input}} group={{username.user_input}} mode=0755
