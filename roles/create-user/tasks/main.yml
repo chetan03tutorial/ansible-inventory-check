@@ -1,9 +1,22 @@
 ---
-  - name: Print the user selection
-    debug: var=admin
+  - name: Prompt for username
+    pause: prompt="Enter the username"
+    register: username
+
+  - name: Prompt for password
+    pause: prompt="Enter the password" echo="no"
+    register: password
+
+  - name: Prompt for role
+    pause: prompt="Do you want to create the user with admin access (y/n) ?"
+    register: role
+
+  - debug: var=role
+
+  - debug: var=password
 
   - name : Store the password in a variable
-    command: echo "{{password | password_hash('sha512')}}"
+    command: echo "{{password.user_input | password_hash('sha512')}}"
     register: upassword
 
   - name: Creating the user with "{{username}}"
