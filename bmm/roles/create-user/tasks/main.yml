@@ -35,7 +35,7 @@
     when: (assigned_group|lower == 'no')
 
   - name: Creating home directory for {{uname}}
-    file: path=/home/{{uname}} state=directory owner={{uname}} group="{{assigned_group}}" mode=0755
+    file: path=/home/{{uname}} state=directory owner={{uname}} group={{assigned_group}} mode=0755
 
   - name: Modify the home directory for the {{username.user_input}}
     user:
