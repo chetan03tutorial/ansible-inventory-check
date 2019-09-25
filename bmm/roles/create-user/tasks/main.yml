@@ -4,7 +4,9 @@
     register: username
 
   - name: Prompt for password
-    pause: prompt="Enter the password" echo=false
+    pause:
+        prompt: "Enter the password"
+        echo: no
     register: password
 
   - name: Prompt for role
