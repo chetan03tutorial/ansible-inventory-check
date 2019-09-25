@@ -11,5 +11,5 @@
       - role: create-user
         when: (choice|UPPER) == "C"
 
-      - role: delete-user
-        when: (choice|UPPER) =="D"
+      #- role: delete-user
+      #  when: (choice|UPPER) =="D"
