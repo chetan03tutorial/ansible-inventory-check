@@ -34,6 +34,7 @@
         file: path=/home/{{username}} state=directory owner={{username}} group="ssh" mode=0755
 
       - name: Add a line in acces.conf for user {{username}}
-        lineinfile: path=/etc/security/access.conf
-        insertbefore: '^- : ALL : ALL'
-        line: '+ : {{username}} : ALL'
+        lineinfile: 
+          path: /etc/security/access.conf
+          insertbefore: '^- : ALL : ALL'
+          line: '+ : {{username}} : ALL'

@@ -17,12 +17,12 @@
 
   - debug: var=password
 
-  - set_fact:
-      uname: "{{username.user_input}}"
+  #- set_fact:
+  #    uname: "{{username.user_input}}"
 
-  - name: Printing the username
-    debug:
-      msg={{uname}}
+  #- name: Printing the username
+  #  debug:
+  #    msg={{uname}}
 
   - name : Store the password in a variable
     command: echo "{{password.user_input | password_hash('sha512')}}"
@@ -33,13 +33,18 @@
           append=yes shell=/bin/bash
     when: (role|lower == 'no')
 
-  - name: Creating home directory for {{uname}}
+  - name: Creating home directory for {{username.user_input}}
     file:
       path: "/home/{{username.user_input}}"
       state: directory
-      owner: "{{uname}}"
-      group: "{{uname}}"
+      owner: "{{username.user_input}}"
+      group: "ssh"
       mode: '0755'
+
+  - name: Modify the home directory for the {{username.user_input}}
+    user:
+      name: "{{username.user_input}}"
+      home: "/home/{{username.user_input}}"
 
   - name: Add a line in acces.conf for user {{uname}}
     lineinfile: path=/etc/security/access.conf
