@@ -20,6 +20,10 @@
   - set_fact:
       uname: "{{username.user_input}}"
 
+  - name: Printing the username
+    debug:
+      msg={{uname}}
+
   - name : Store the password in a variable
     command: echo "{{password.user_input | password_hash('sha512')}}"
     register: upassword
