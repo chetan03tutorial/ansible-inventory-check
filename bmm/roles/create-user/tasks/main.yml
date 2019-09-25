@@ -17,8 +17,8 @@
 
   - debug: var=password
 
-  #- set_fact:
-  #    uname: "{{username.user_input}}"
+  - set_fact:
+      uname: "{{username.user_input}}"
 
   - name: Printing the username
     debug:
