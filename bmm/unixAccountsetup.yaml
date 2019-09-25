@@ -31,7 +31,7 @@
         when: (admin|lower == 'no')
 
       - name: Creating home directory for {{username}}
-        file: path=/home/{{username}} state=directory owner={{username}} group={{username}} mode=0755
+        file: path=/home/{{username}} state=directory owner={{username}} group="ssh" mode=0755
 
       - name: Add a line in acces.conf for user {{username}}
         lineinfile: path=/etc/security/access.conf
