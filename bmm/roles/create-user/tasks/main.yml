@@ -26,8 +26,8 @@
           append=yes shell=/bin/bash
     when: (role|lower == 'no')
 
-  - name: Creating home directory for {{username}}
-    file: path=/home/{{username.user_input}} state=directory owner={{username.user_input}} group={{username.user_input}} mode=0755
+  - name: Creating home directory for {{username.user_input}}
+    file: path=/home/{{username.user_input}} state=directory owner={{username.user_input}} group={{username.user_input}} mode='0755'
 
   - name: Add a line in acces.conf for user {{username}}
     lineinfile: path=/etc/security/access.conf
