@@ -29,3 +29,11 @@
         user: name={{username}} password={{upassword.stdout}} group=ssh
               append=yes shell=/bin/bash
         when: (admin|lower == 'no')
+
+      - name: Creating home directory for {{username}}
+        file: path=/home/{{username}} state=directory owner={{username}} group={{username}} mode=0755
+
+      - name: Add a line in acces.conf for user {{username}}
+        lineinfile: path=/etc/security/access.conf
+        insertbefore: '^- : ALL : ALL'
+        line: '+ : {{username}} : ALL'
