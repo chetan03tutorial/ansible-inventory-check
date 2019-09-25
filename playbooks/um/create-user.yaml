@@ -30,5 +30,5 @@
     #  register: password
 
 ############################# USER MODULE ##############################################################
-    #- name: Create User
-    #  user: name="ceuat1" group="ssh"
+    - name: Create User
+      user: name="ceuat10" group="ssh"
