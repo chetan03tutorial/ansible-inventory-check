@@ -32,7 +32,7 @@
   - name: Creating the user with "{{username.user_input}}"
     user: name={{uname}} password={{upassword.stdout}} group={{assigned_group}}
           append=yes shell=/bin/bash
-    when: (assigned_group|lower == 'no')
+    #when: (assigned_group|lower == 'no')
 
   - name: Creating home directory for {{uname}}
     file: path=/home/{{uname}} state=directory owner={{uname}} group={{assigned_group}} mode=0755
