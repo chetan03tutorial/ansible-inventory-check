@@ -10,7 +10,7 @@
     register: password
 
   - name: Prompt for role
-    pause: prompt="Do you want to create the user with admin access (y/n) ?"
+    pause: prompt="Enter the group assigned to the user?"
     register: role
 
   - debug: var=role
@@ -19,6 +19,7 @@
 
   - set_fact:
       uname: "{{username.user_input}}"
+      assigned_group: "{{role.user_input}}"
 
   - name: Printing the username
     debug:
@@ -29,12 +30,12 @@
     register: upassword
 
   - name: Creating the user with "{{username.user_input}}"
-    user: name={{uname}} password={{upassword.stdout}} group="ssh"
+    user: name={{uname}} password={{upassword.stdout}} group="{{assigned_group}}"
           append=yes shell=/bin/bash
-    when: ("{{role.user_input}}"|lower == 'no')
+    when: (assigned_group|lower == 'no')
 
   - name: Creating home directory for {{uname}}
-    file: path=/home/{{uname}} state=directory owner={{uname}} group="ssh" mode=0755
+    file: path=/home/{{uname}} state=directory owner={{uname}} group="{{assigned_group}}" mode=0755
 
   - name: Modify the home directory for the {{username.user_input}}
     user:
@@ -42,6 +43,7 @@
       home: "/home/{{username.user_input}}"
 
   - name: Add a line in acces.conf for user {{uname}}
-    lineinfile: path=/etc/security/access.conf
-    insertbefore: '^- : ALL : ALL'
-    line: '+ : {{uname}} : ALL'
+    lineinfile:
+      path: /etc/security/access.conf
+      insertbefore: '^- : ALL : ALL'
+      line: '+ : {{uname}} : ALL'
