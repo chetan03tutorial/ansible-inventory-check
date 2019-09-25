@@ -1,0 +1,15 @@
+---
+  - name: Manage the unix account on the host machine
+    hosts: webservers
+    vars_prompt:
+      - name: choice
+        prompt: "Do you want to create or delete an acount (C/D) ?"
+        private: no
+
+    roles:
+
+      - role: create-user
+        when: (choice|UPPER) == "C"
+
+      - role: delete-user
+        when: (choice|UPPER) =="D"

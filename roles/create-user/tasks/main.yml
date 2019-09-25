@@ -1,0 +1,20 @@
+---
+  - name: Print the user selection
+    debug: var=admin
+
+  - name : Store the password in a variable
+    command: echo "{{password | password_hash('sha512')}}"
+    register: upassword
+
+  - name: Creating the user with "{{username}}"
+    user: name={{username}} password={{upassword.stdout}} group=ssh
+          append=yes shell=/bin/bash
+    when: (admin|lower == 'no')
+
+  - name: Creating home directory for {{username}}
+    file: path=/home/{{username}} state=directory owner={{username}} group={{username}} mode=0755
+
+  - name: Add a line in acces.conf for user {{username}}
+    lineinfile: path=/etc/security/access.conf
+    insertbefore: '^- : ALL : ALL'
+    line: '+ : {{username}} : ALL'
