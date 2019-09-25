@@ -17,6 +17,9 @@
 
   - debug: var=password
 
+  - set_fact:
+      uname: "{{username.user_input}}"
+
   - name : Store the password in a variable
     command: echo "{{password.user_input | password_hash('sha512')}}"
     register: upassword
@@ -26,10 +29,15 @@
           append=yes shell=/bin/bash
     when: (role|lower == 'no')
 
-  - name: Creating home directory for {{username.user_input}}
-    file: path=/home/{{username.user_input}} state=directory owner={{username.user_input}} group={{username.user_input}} mode='0755'
+  - name: Creating home directory for {{uname}}
+    file:
+      path: "/home/{{username.user_input}}"
+      state: directory
+      owner: "{{uname}}"
+      group: "{{uname}}"
+      mode: '0755'
 
-  - name: Add a line in acces.conf for user {{username}}
+  - name: Add a line in acces.conf for user {{uname}}
     lineinfile: path=/etc/security/access.conf
     insertbefore: '^- : ALL : ALL'
-    line: '+ : {{username}} : ALL'
+    line: '+ : {{uname}} : ALL'
