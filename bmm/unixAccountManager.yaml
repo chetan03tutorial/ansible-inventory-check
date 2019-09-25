@@ -9,7 +9,7 @@
     roles:
 
       - role: create-user
-        when: (choice|UPPER) == "C"
+        when: (choice|upper) == "C"
 
       #- role: delete-user
       #  when: (choice|UPPER) =="D"
