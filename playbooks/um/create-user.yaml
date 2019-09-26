@@ -2,27 +2,27 @@
   name: Test connectivity with the target system
   hosts: webserver
   vars_prompt:
-    - name: "password"
-      prompt: "Enter the password"
-      private: yes
+    #- name: "password"
+    #  prompt: "Enter the password"
+    #  private: yes
       #encrypt: "sha512_crypt"
-      confirm: yes
+    #  confirm: yes
 
   tasks:
 
-    - name: Printing the password
+    #- name: Printing the password
+    #  debug:
+    #    var: password
+
+    #- name : Store the password in a variable
+    #  command: echo "{{password | password_hash('sha512')}}"
+    #  register: upassword
+
+    #- debug: var=upassword.stdout
+
+    - name: Printing the application username
       debug:
-        var: password
-
-    - name : Store the password in a variable
-      command: echo "{{password | password_hash('sha512')}}"
-      register: upassword
-
-    - debug: var=upassword.stdout
-
-    - name: Priting the application username
-      debug:
-        msg="{{ce_app_user}}/{{Jai}}"
+        msg="{{ce_app_user}}"
 
 ############################## PAUSE MODULE #############################################################
     #- name: Generate a password
