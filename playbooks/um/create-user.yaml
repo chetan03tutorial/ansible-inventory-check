@@ -22,7 +22,7 @@
 
     - name: Printing the application username
       debug:
-        msg="{{WsJai}}"
+        msg="{{Jai}}"
 
 ############################## PAUSE MODULE #############################################################
     #- name: Generate a password
