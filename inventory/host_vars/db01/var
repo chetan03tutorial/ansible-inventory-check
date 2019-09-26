@@ -1,1 +1,3 @@
 Jai: Jai
+DB_USER_NAME : {{db_user_name}}
+DB_USER_PASS : {{db_user_pass}}

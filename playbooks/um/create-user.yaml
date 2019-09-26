@@ -1,6 +1,6 @@
 -
   name: Test connectivity with the target system
-  hosts: webservers
+  hosts: databases
   vars_prompt:
     #- name: "password"
     #  prompt: "Enter the password"
@@ -22,7 +22,7 @@
 
     - name: Printing the application username
       debug:
-        msg="{{WsJai}}/{{Jai}}"
+        msg="{{DB_USER_NAME}}/{{Jai}}/{{DB_USER_PASS}}"
 
 ############################## PAUSE MODULE #############################################################
     #- name: Generate a password
