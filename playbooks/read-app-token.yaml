@@ -1,6 +1,6 @@
 -
   name: Read a token using regular expression
-  hosts: webserver
+  hosts: webserver.yaml
   vars:
     content: "{{lookup('file','/home/LDC/ansible-inventory-check/conf/token.properties')}}"
   tasks:

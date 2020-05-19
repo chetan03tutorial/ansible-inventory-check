@@ -5,7 +5,7 @@
 
   - hosts: webservers
     tasks:
-      service: name=webserver state=stopped
+      service: name=webserver.yaml state=stopped
 
   - hosts: databases
     tasks:
@@ -13,7 +13,7 @@
 
   - hosts: webservers
     tasks:
-      service: name=webserver state=started
+      service: name=webserver.yaml state=started
 
   - hosts: loadbalancers
     tasks:

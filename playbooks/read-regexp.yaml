@@ -1,6 +1,6 @@
 -
   name: Read a token using regular expression
-  hosts: webserver
+  hosts: webserver.yaml
   tasks:
     - shell: echo 'vault-option name="KEYSTORE_PASSWORD" value="MASK-5dOaAVafCSd" value="One more time" value="MASK-ED-123-LT"'
       register: results

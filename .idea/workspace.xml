@@ -1,7 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1329f751-58e9-4877-a33a-03033651c448" name="Default Changelist" comment="" />
+    <list default="true" id="1329f751-58e9-4877-a33a-03033651c448" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/all/cross_env_variable.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/all/env_specific.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/databases/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/eastzone.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/loadbalancers/lb.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/loadbalancers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/webservers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/group_vars/webservers/webserver.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/control/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/control/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/db01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/db01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/lb01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/lb01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/ws01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/host_vars/ws01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/dev/hosts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/all/cross_env_variable.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/all/env_specific.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/databases/db.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/databases/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/eastzone.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/loadbalancers/lb.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/loadbalancers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/webservers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/group_vars/webservers/webserver.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/control/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/control/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/db01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/db01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/lb01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/lb01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/ws01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/host_vars/ws01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/prod/hosts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/all/cross_env_variable.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/all/env_specific.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/databases/db.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/databases/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/eastzone.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/loadbalancers/lb.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/loadbalancers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/webservers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/group_vars/webservers/webserver.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/control/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/control/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/db01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/db01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/lb01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/lb01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/ws01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/host_vars/ws01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/sit/hosts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/all/cross_env_variable.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/all/env_specific.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/databases/db.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/databases/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/eastzone.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/loadbalancers/lb.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/loadbalancers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/webservers/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/group_vars/webservers/webserver.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/control/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/control/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/db01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/db01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/lb01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/lb01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/ws01/var" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/host_vars/ws01/vault" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environments/uat/hosts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secrets/.vault_password" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ansible.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ansible.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bmm/stack-restart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bmm/stack-restart.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/host_vars/webserver.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/host_vars/webserver.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/build-conf.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/build-conf.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/ceDD.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/ceDD.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/ceDeploymentDescriptor.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/ceDeploymentDescriptor.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/create-directory-2.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/create-directory-2.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/create-directory.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/create-directory.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/lookup-properties.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/lookup-properties.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/ping-test/ping-test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/ping-test/ping-test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/read-app-token.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/read-app-token.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/read-file.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/read-file.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/read-regexp.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/read-regexp.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbooks/replace-token.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/playbooks/replace-token.yaml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +111,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/conf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/secrets" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\home\projects\ansible-inventory-check\conf" />
-      <recent name="C:\home\projects\ansible-inventory-check\playbooks" />
+      <recent name="C:\home\ansible-inventory-check\secrets" />
+      <recent name="C:\home\ansible-inventory-check\environments\uat" />
+      <recent name="C:\home\ansible-inventory-check\environments\sit" />
+      <recent name="C:\home\ansible-inventory-check\environments\prod" />
+      <recent name="C:\home\ansible-inventory-check\environments\dev\host_vars\ws01" />
     </key>
   </component>
   <component name="RunDashboard">

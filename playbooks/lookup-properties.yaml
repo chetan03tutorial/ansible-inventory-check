@@ -1,6 +1,6 @@
 -
   name: Read a file on the target system
-  hosts: webserver
+  hosts: webserver.yaml
   tasks:
     - name: Copy File to the target system
       copy:

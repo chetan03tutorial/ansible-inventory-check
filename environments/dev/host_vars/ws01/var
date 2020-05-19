@@ -1,0 +1,3 @@
+---
+    ansible_ssh_pass: "{{vault_host_password}}"
+    secret: "{{vault_host_secret}}"

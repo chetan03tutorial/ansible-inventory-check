@@ -1,2 +1,2 @@
 ---
-webserverhost: webserver-hostname
+webserverhost: webserver.yaml-hostname

@@ -1,6 +1,6 @@
 -
   name: Test connectivity with the target system
-  hosts: webserver
+  hosts: webserver.yaml
   tasks:
     - name: Ping Test
       ping:

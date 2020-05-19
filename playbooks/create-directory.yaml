@@ -1,6 +1,6 @@
 -
   name: Create a directory app-conf in the $HOME/app/conf directory
-  hosts: webserver
+  hosts: webserver.yaml
   tasks:
     - name: Ensure a configuration directory exists in $HOME/app
       file:

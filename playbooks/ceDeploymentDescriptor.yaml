@@ -1,5 +1,5 @@
 ---
-- hosts: webserver
+- hosts: webserver.yaml
   #become: true
   tasks:
     - name: Install Required Tools

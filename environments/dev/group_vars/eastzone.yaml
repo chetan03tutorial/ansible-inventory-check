@@ -1,0 +1,3 @@
+app_name: "ce"
+env: "uat1"
+ce_app_user: "{{app_name}}{{env}}app"
